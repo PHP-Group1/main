@@ -11,7 +11,7 @@
             "
             <script>
                 alert('로그아웃');
-                location.href = '../../view/login.php'
+                location.href = '../view/login_view.php'
             </script>
             ";
     } else {
