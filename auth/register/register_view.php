@@ -146,14 +146,14 @@
 
 <header>
     <?php
-        include "header/header_check.php";
+        include $_SERVER["DOCUMENT_ROOT"]."/main/common/header/header_check.php";
     ?>
 </header>   
 
     <div class = "wrap">
     <div class = "contents">
         <div class = 'signup'>회원가입</div><hr class = "line">
-        <form action="../auth/register.php" method="post" id="register">
+        <form action="register.php" method="post" id="register">
             <p style = "top: 265.41px;">아이디</p>
             <input type = "text" class = "input_id" name = "id" id = "id">
             <p style = "top: 371.15px;">비밀번호</p>

@@ -1,6 +1,6 @@
 <?php
 
-    require '../common/common.php';
+    require '../../common/common.php';
 
     $id = $_POST['id'];
     $pw = $_POST['pw'];
@@ -40,7 +40,7 @@
             echo 
                 "<script>
                     alert('로그인 성공');
-                    location.href = '../view/login_view.php'
+                    location.href = 'login_view.php'
                 </script>";
         }
 
