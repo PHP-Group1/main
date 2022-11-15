@@ -59,7 +59,7 @@
             let logout = document.querySelector('#logout');
 
             logout.addEventListener('click', () => {
-                location.href = "../../auth/logout.php";
+                location.href = "../auth/service/logout.php";
             })
         </script>
 </body>

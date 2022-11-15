@@ -104,7 +104,7 @@
 <div class = "wrap">
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
-        <form action="login.php" method="post" id="login">            
+        <form action="service/login.php" method="post" id="login">            
             <input type = "text" placeholder = "ID" class = "input_id" name = "id" id = "id"></input>
             <hr class = "line" style = "top: 455px;">
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
