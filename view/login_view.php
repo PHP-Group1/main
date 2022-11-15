@@ -92,7 +92,15 @@
 
     </style>
 </head>
+
 <body>
+
+<header>
+    <?php
+        include "header/header_check.php";
+    ?>
+</header>
+
 <div class = "wrap">
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
@@ -101,20 +109,13 @@
             <hr class = "line" style = "top: 455px;">
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
             <hr class = "line" style = "top: 544px;">
-        </form>
-
             <button class = "button" id = "login_btn">로그인</button>
+        </form>
 
     </div>
 </div>
     
 <script>
-    const loginBtn = document.querySelector('#login_btn');
-    const loginSubmit = document.querySelector('#login');
-
-    loginBtn.addEventListener('click', () => {
-        loginSubmit.submit();
-    })
 
 </script>
 </body>

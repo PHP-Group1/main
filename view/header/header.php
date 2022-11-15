@@ -53,7 +53,15 @@
             <h3 class = "logo"> 당신의 운세</h3>
             <p style = "left: 95%;">QnA</p>
             <p style = "left: 85%;">회원가입</p>
-            <p style = "left: 75%;">로그인</p>
+            <p style = "left: 75%;" id="login">로그인</p>
         </div>
+
+        <script>
+            let login = document.querySelector('#login');
+
+            login.addEventListener('click', () => {
+                location.href = "../view/login_view.php";
+            })
+        </script>
 </body>
 </html>

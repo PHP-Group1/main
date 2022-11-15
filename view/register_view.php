@@ -47,7 +47,7 @@
             border: 2px solid #442C2C;
             background: #442c2c;
         }
-        p{
+        form p{
             margin: 0;
             padding: 0;
             position: absolute;
@@ -143,6 +143,13 @@
     </style>
 </head>
 <body>
+
+<header>
+    <?php
+        include "header/header_check.php";
+    ?>
+</header>   
+
     <div class = "wrap">
     <div class = "contents">
         <div class = 'signup'>회원가입</div><hr class = "line">
