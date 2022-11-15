@@ -40,7 +40,7 @@
             echo 
                 "<script>
                     alert('로그인 성공');
-                    location.href = 'test.php'
+                    location.href = '../view/login_view.php'
                 </script>";
         }
 

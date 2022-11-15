@@ -96,18 +96,26 @@
 <div class = "wrap">
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
-        <form>
+        <form action="../auth/login.php" method="post" id="login">            
             <input type = "text" placeholder = "ID" class = "input_id" name = "id" id = "id"></input>
             <hr class = "line" style = "top: 455px;">
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
             <hr class = "line" style = "top: 544px;">
         </form>
+
             <button class = "button" id = "login_btn">로그인</button>
+
     </div>
 </div>
     
+<script>
+    const loginBtn = document.querySelector('#login_btn');
+    const loginSubmit = document.querySelector('#login');
+
+    loginBtn.addEventListener('click', () => {
+        loginSubmit.submit();
+    })
+
+</script>
 </body>
 </html>
-<?php
-
-?>
