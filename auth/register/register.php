@@ -1,6 +1,6 @@
 <?php
 
-    require '../common/common.php';
+    require '../../common/common.php';
 
     $name = $_POST['name'];
     $id = $_POST['id'];
@@ -21,7 +21,7 @@
         echo 
             "<script>
                 alert('회원가입 성공');
-                location.href = '../view/login_view.php'
+                location.href = '../login/login_view.php'
             </script>";
     } else {
         echo 
