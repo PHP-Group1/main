@@ -153,7 +153,7 @@
     <div class = "wrap">
     <div class = "contents">
         <div class = 'signup'>회원가입</div><hr class = "line">
-        <form action="register.php" method="post" id="register">
+        <form action="service/register.php" method="post" id="register">
             <p style = "top: 265.41px;">아이디</p>
             <input type = "text" class = "input_id" name = "id" id = "id">
             <p style = "top: 371.15px;">비밀번호</p>

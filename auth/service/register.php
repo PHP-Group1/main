@@ -21,7 +21,7 @@
         echo 
             "<script>
                 alert('회원가입 성공');
-                location.href = '../login/login_view.php'
+                location.href = '../login_view.php'
             </script>";
     } else {
         echo 

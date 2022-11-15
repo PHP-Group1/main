@@ -11,7 +11,7 @@
             "
             <script>
                 alert('로그아웃');
-                location.href = 'login/login_view.php'
+                location.href = '../login_view.php'
             </script>
             ";
     } else {
@@ -19,7 +19,7 @@
             "
             <script>
                 alert('로그인 안돼있음');
-                location.href = 'login/login_view.php'
+                location.href = '../login_view.php'
             </script>
             ";
     }
