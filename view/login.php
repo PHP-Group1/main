@@ -13,42 +13,8 @@
         .wrap{
             margin:0;
             padding:0;
-            width:1440px;
-            height:1024px;
-        }
-        .header{
-            width: 100%;
-            height: 53px;
-            background-color : #393939;
-            margin: 0;
-            padding: 0;
-        }
-        .logo{
-            float:left;
-            margin-top: 14px;
-            margin-left: 28px;
-            padding : 0;
-            color: #ffffff;
-
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;  
-        }
-        p{
-            color: #ffffff;
-            position: absolute;
-            height: 24px;
-            top: 14px;
-            margin: 0;
-            padding: 0;
-
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
+            width:100%;
+            height:100%;
         }
         .contents{
             margin: 0;
@@ -60,10 +26,10 @@
         }
         .login{
             position: absolute;
-            width: 266px;
-            height: 91px;
-            left: 44.5%;
+            left: 43.43%;
             top: 258px;
+            padding: auto;
+            margin: auto;
 
             font-family: 'Inter';
             font-style: normal;
@@ -79,43 +45,64 @@
         .input_id{
             position: absolute;
             width: 444px;
-            left: 500px;
+            left: 33%;;
             top: 403px;
         }
         .input_pw{
             position: absolute;
             width: 444px;
-            left: 500px;
+            left: 33%;
             top: 490px;
+        }
+        input{
+            height: 40px;
+            border: 0;
+            background-color: #FFFDF5;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 25px;
+            line-height: 30px;
         }
         .button{
             position: absolute;
             width: 394px;
             height: 76px;
-            left: 520px;
+            left: 35%;
             top: 633px;
 
             color: #ffffff;
             background: #000000;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        .line{
+            position: absolute;
+            width: 444px;
+            height: 0px;
+            left: 33%;
+
+            border: 1px solid #000000;
+            background:#000000;
         }
 
-        
-        
     </style>
 </head>
 <body>
 <div class = "wrap">
-    <div class = "header">
-        <h3 class = "logo"> 당신의 운세</h3>
-        <p style = "left: 1367px; width: 42px; ">QnA</p>
-        <p style = "left: 1215px; width: 74px; ">회원가입</p>
-        <p style = "left: 1079px; width: 56px;">로그인</p>
-    </div>
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
+        <form>
             <input type = "text" placeholder = "ID" class = "input_id" name = "id" id = "id"></input>
-            <input type = "password" placeholder = "PW" class = "input_pw" name = "pw" id = "pw"></input>
-            <input type = "submit" class = "button" value = "로그인"></input>
+            <hr class = "line" style = "top: 455px;">
+            <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
+            <hr class = "line" style = "top: 544px;">
+        </form>
+            <button class = "button" id = "login_btn">로그인</button>
     </div>
 </div>
     
