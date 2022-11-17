@@ -146,7 +146,7 @@
 
 <header>
     <?php
-        include $_SERVER["DOCUMENT_ROOT"]."/main/common/header/header_check.php";
+        include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
     ?>
 </header>   
 

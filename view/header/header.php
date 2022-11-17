@@ -60,7 +60,7 @@
             let login = document.querySelector('#login');
 
             login.addEventListener('click', () => {
-                location.href = "../view/login_view.php";
+                location.href = "../auth/login_view.php";
             })
         </script>
 </body>

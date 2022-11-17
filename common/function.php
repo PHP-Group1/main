@@ -1,6 +1,7 @@
 <?php
 
     require 'config/conn.php';
+    require '../../auth/service/cookie.php';
 
     function sqlResult($sql) {
         global $conn;
@@ -11,6 +12,11 @@
         } else {
             return $result;
         }
+    }
+
+    function cookie($cookieName, $value) {
+        global $available;
+        setcookie($cookieName, $value, time() + $available);
     }
 
 ?>

@@ -4,8 +4,6 @@
     if(isset($_SESSION['user_id'])) {
         unset($_SESSION['user_id']);
         unset($_SESSION['user_name']);
-        unset($_SESSION['user_birth']);
-        unset($_SESSION['user_sex']);
 
         echo
             "
