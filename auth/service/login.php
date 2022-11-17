@@ -15,7 +15,7 @@
         echo 
             "<script>
                 alert('아이디 없음');
-                history.back();
+                location.href = '../login_view.php';
             </script>";
     } else {
         $row = mysqli_fetch_array($result);
@@ -34,8 +34,6 @@
             session_start();
             $_SESSION["user_id"] = $row['id'];
             $_SESSION["user_name"] = $row['name'];
-            $_SESSION["user_birth"] = $row['birth'];
-            $_SESSION["user_sex"] = $row['sex'];
 
             echo 
                 "<script>
