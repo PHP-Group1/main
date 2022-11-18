@@ -144,16 +144,15 @@
 </head>
 <body>
 
-<header>
-    <?php
-        include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
-    ?>
-</header>   
-
     <div class = "wrap">
+        <header>
+            <?php
+                include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
+            ?>
+        </header>  
     <div class = "contents">
         <div class = 'signup'>회원가입</div><hr class = "line">
-        <form action="service/register.php" method="post" id="register">
+        <form id="register" action="service/register.php" method="POST">
             <p style = "top: 265.41px;">아이디</p>
             <input type = "text" class = "input_id" name = "id" id = "id">
             <p style = "top: 371.15px;">비밀번호</p>
@@ -163,24 +162,17 @@
             <p style = "top: 582.63px;">이름</p>
             <input type = "text"  class = "input_name" name = "name" id = "name">
             <p class = "text_s">성별</p>
-            <label class = "female"><input type = "radio" name = "sex" value = "w">여성</label>
-            <label class = "male"><input type = "radio" name = "sex"  value = "m">남성</label>
+            <label class = "female"><input type="radio" name="sex" value="w">여성</label>
+            <label class = "male"><input type="radio" name="sex" value="m">남성</label>
             <p class = "text_b">생년월일</p>
-            <input type = "date" class = "birth" name="birth"></input>
-            <label class = "agree"><input type = "checkbox" name = "agree" value = "1">이용약관 및 개인정보수집 및 이용, 정보 수신에 동의합니다.</label>
+            <input type = "date" class = "birth" name="birth" id="birth"></input>
+            <label class = "agree"><input type = "checkbox" name = "agree" value = "1" id="agree">이용약관 및 개인정보수집 및 이용, 정보 수신에 동의합니다.</label>
         </form>
         <button class = "button" id = "register_btn">회원가입</button>
     </div>   
     </div>
-
-    <script>
-    const registerBtn = document.querySelector('#register_btn');
-    const registerSubmit = document.querySelector('#register');
-
-    registerBtn.addEventListener('click', () => {
-        registerSubmit.submit();
-    })
-
-</script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../js/register.js"></script>
 </body>
 </html>

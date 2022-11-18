@@ -95,28 +95,29 @@
 
 <body>
 
-<header>
-    <?php
-        include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
-    ?>
-</header>
-
 <div class = "wrap">
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
+        ?>
+    </header>
+    
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
-        <form action="service/login.php" method="post" id="login">            
+        <form action="service/login.php" method="post">            
             <input type = "text" placeholder = "ID" class = "input_id" name = "id" id = "id"></input>
             <hr class = "line" style = "top: 455px;">
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
             <hr class = "line" style = "top: 544px;">
-            <button class = "button" id = "login_btn">로그인</button>
         </form>
+
+        <button class = "button" id = "login_btn">로그인</button>
 
     </div>
 </div>
     
-<script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="../js/login.js"></script>
 
-</script>
 </body>
 </html>

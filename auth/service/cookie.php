@@ -6,5 +6,4 @@
 
     $available = $end - $now;
 
-
-    
+?>
