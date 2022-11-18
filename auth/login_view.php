@@ -91,14 +91,26 @@
     </style>
 </head>
 <body>
+
+
+
 <div class = "wrap">
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
+        ?>
+    </header>
+
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
+        <form action="service/login.php" method="post" class = "contents">            
             <input type = "text" placeholder = "ID" class = "input_id" name = "id" id = "id"></input>
             <hr class = "line" style = "top: 455px;"></hr>
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
-            <hr class = "line" style = "top: 544px;"></hr>
-            <input type = "submit" class = "button" value = "로그인"></input>
+            <hr class = "line" style = "top: 544px;">
+            <button class = "button" id = "login_btn">로그인</button>
+        </form>
+
     </div>
 </div>
     
