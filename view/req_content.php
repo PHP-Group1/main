@@ -17,30 +17,33 @@
             height: 971px;
 
             background: #FFFDF5;
+            
+            display: flex;
+            justify-content : center;
         }
+        
         .text{
-            position: absolute;
+            position:absolute;
             top:190px;
-            left: 30%;
             padding: 0;
             margin: 0;
 
             font-weight: 700;
             font-size: 40px;
             line-height: 48px;
-            align-items: center;
-            text-align: center;
         }
+
         .input_box{
             position: absolute;
             top: 260px;
-            left: 18%;
             width: 937px;
             height: 455px;
             resize: none;
         }
         .submit{
             position: absolute;
+            margin:0;
+            padding:0;
             top: 737px;
             left: 76%;
             width: 109px;
