@@ -23,10 +23,12 @@
             height: 971px;
             background-color: #FFFDF5;
 
+            display: flex;
+            justify-content : center;
+
         }
         .login{
             position: absolute;
-            left: 43.43%;
             top: 258px;
             padding: auto;
             margin: auto;
@@ -45,13 +47,11 @@
         .input_id{
             position: absolute;
             width: 444px;
-            left: 33%;;
             top: 403px;
         }
         .input_pw{
             position: absolute;
             width: 444px;
-            left: 33%;
             top: 490px;
         }
         input{
@@ -68,7 +68,6 @@
             position: absolute;
             width: 394px;
             height: 76px;
-            left: 35%;
             top: 633px;
 
             color: #ffffff;
@@ -84,7 +83,6 @@
             position: absolute;
             width: 444px;
             height: 0px;
-            left: 33%;
 
             border: 1px solid #000000;
             background:#000000;
@@ -92,32 +90,17 @@
 
     </style>
 </head>
-
 <body>
-
 <div class = "wrap">
-    <header>
-        <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
-        ?>
-    </header>
-    
     <div class = "contents">
         <div class = 'login'>LOGIN</div>
-        <form action="service/login.php" method="post">            
             <input type = "text" placeholder = "ID" class = "input_id" name = "id" id = "id"></input>
-            <hr class = "line" style = "top: 455px;">
+            <hr class = "line" style = "top: 455px;"></hr>
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
-            <hr class = "line" style = "top: 544px;">
-        </form>
-
-        <button class = "button" id = "login_btn">로그인</button>
-
+            <hr class = "line" style = "top: 544px;"></hr>
+            <input type = "submit" class = "button" value = "로그인"></input>
     </div>
 </div>
     
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="../js/login.js"></script>
-
 </body>
 </html>
