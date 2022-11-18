@@ -12,6 +12,7 @@
     $id_check = mysqli_num_rows($result);
 
     if (!$id_check) {
+        mysqli_close($conn);
         echo 
             "<script>
                 alert('아이디 없음');
@@ -34,6 +35,7 @@
             session_start();
             $_SESSION["user_id"] = $row['id'];
             $_SESSION["user_name"] = $row['name'];
+            mysqli_close($conn);
 
             echo 
                 "<script>

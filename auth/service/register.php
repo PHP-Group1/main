@@ -18,12 +18,15 @@
 
         sqlResult($register_sql);
 
+        mysqli_close($conn);
+
         echo 
             "<script>
                 alert('회원가입 성공');
-                location.href = '../login_view.php'
+                location.href = '../register_success.php'
             </script>";
     } else {
+        mysqli_close($conn);
         echo 
             "<script>
                 alert('이미 존재하는 아이디');

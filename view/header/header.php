@@ -52,7 +52,7 @@
         <div class = "header">
             <h3 class = "logo"> 당신의 운세</h3>
             <p style = "left: 95%;">QnA</p>
-            <p style = "left: 85%;">회원가입</p>
+            <p style = "left: 85%;" id="register">회원가입</p>
             <p style = "left: 75%;" id="login">로그인</p>
         </div>
 
@@ -61,6 +61,12 @@
 
             login.addEventListener('click', () => {
                 location.href = "../auth/login_view.php";
+            })
+
+            let register = document.querySelector('#register');
+
+            register.addEventListener('click', () => {
+                location.href = "../auth/register_view.php";
             })
         </script>
 </body>

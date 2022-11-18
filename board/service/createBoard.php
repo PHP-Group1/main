@@ -30,7 +30,7 @@
                 history.back();
             </script>
             ";
-
     }
+    mysqli_close($conn);
 
 ?>

@@ -5,3 +5,12 @@
     <br>
     <input type="submit" value="test">
 </form>
+
+<button>조회</button>
+
+<script>
+    let btn = document.querySelector('button');
+    btn.addEventListener('click', () => {
+        location.href = "service/findAll.php";
+    })
+</script>
