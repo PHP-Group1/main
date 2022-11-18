@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Original navbar</title>
+    <title>animal navbar</title>
     <style>
         body{
             margin: 0;
@@ -31,7 +31,6 @@
             font-size: 28px;
             line-height: 34px;
             text-align: center;
-
         }
         .animal{
             margin: 0;
@@ -44,6 +43,8 @@
             font-size: 28px;
             line-height: 34px;
             text-align: center;
+
+            border-bottom: 2px solid #000000;
 
         }
         .star{
