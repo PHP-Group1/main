@@ -33,23 +33,27 @@
         .content1{
             width: 970px;
             height: 496px;
-            background-color: #FFF9C0;
             margin:0 31px 20px 0;
+            background-image: url('../img/content/content1.png');
+            background-color: #E8FFDD;
         }
         .content2{
             width: 363px;
             height: 498px;
+            background-image: url('../img/content/content2.png');
             background-color: #E8FFDD;
         }
         .content3{
             width: 788px;
             height: 321px;
+            background-image: url('../img/content/content3.png');
             background-color: #DFF5FF;
             margin-right: 25px;
         }
         .content4{
             width: 551px;
             height: 321px;
+            background-image: url('../img/content/content4.png');
             background-color: #FFEFF7;
         }
 
