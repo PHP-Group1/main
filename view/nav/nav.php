@@ -96,18 +96,30 @@
             font-size: 28px;
             line-height: 34px;
             text-align: center;
-
+        }
+        .navbar > div {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class = "navbar">
-        <div class = "todayLuck">오늘의 운세</div>
+        <div class = "todayLuck" id = "todayluck">오늘의 운세</div>
         <div class = "animal">띠 운세</div>
         <div class = "star">별자리 운세</div>
         <div class = "listen" >듣고싶은 말</div>
-        <div class = "fortune">포춘쿠키</div>
+        <div class = "fortune" id = "fortune">포춘쿠키</div>
         <div class = "item">행운의 아이템</div>
     </div>
+    <script>
+        let todayLuck = document.querySelector("#todayLuck");
+        todayluck.addEventListener("click", () => {
+            location.href = `${root}`
+        })
+        let forTune = document.querySelector("#fortune");
+        forTune.addEventListener("click", () => {
+            location.href = `${root}/view/fortune/fortune_content.php`
+        })
+    </script>
 </body>
 </html>

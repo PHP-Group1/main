@@ -30,6 +30,7 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;  
+            cursor: pointer;
         }
         p{
             color: #ffffff;
@@ -44,35 +45,40 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
+            cursor: pointer;
         }
+     
+        
      
     </style>
 </head>
 <body>
         <div class = "header">
-            <h3 class = "logo"> 당신의 운세</h3>
+            <h3 class = "logo" id = "logo">당신의 운세</h3>
             <p style = "left: 95%;" id="qna">QnA</p>
             <p style = "left: 85%;" id="register">회원가입</p>
             <p style = "left: 75%;" id="login">로그인</p>
         </div>
 
         <script>
+            let root = "http://localhost:80/main/"
             let login = document.querySelector('#login');
-
             login.addEventListener('click', () => {
-                location.href = "../auth/login_view.php";
+                location.href = `${root}auth/login_view.php`;
             })
-
             let register = document.querySelector('#register');
-
             register.addEventListener('click', () => {
-                location.href = "../auth/register_view.php";
+                location.href = `${root}auth/register_view.php`;
             })
             let qna = document.querySelector('#qna');
-
             qna.addEventListener('click', () => {
                 
             })
+            let home = document.querySelector('#logo');
+            home.addEventListener('click', () => {
+                location.href = `${root}view/main_content.php`;
+            })
+            
         </script>
 </body>
 </html>

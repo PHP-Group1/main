@@ -15,7 +15,6 @@
             height: 971px;
             background-color: #FFFDF5;
             padding-top: 100px;
-            
         }
         .cookie_box{
             width: 1081px;
@@ -33,7 +32,7 @@
             color:#ffffff;
             margin: auto;
 
-            width: 841px;
+            width: 800px;
             height: 134px;
 
             -webkit-text-stroke: 6px #AB6700;
@@ -47,17 +46,17 @@
             float: left;
         }
         .cookie1{
-            margin-right: 30px;
+            margin-right: 20px;
             margin-bottom: 14px;
         }
         .cookie2{
-            margin-right: 30px;
+            margin-right: 20px;
         }
         .cookie4{
-            margin-right: 30px;
+            margin-right: 20px;
         }
         .cookie5{
-            margin-right: 30px;
+            margin-right: 20px;
         }
         .cookie_box > div:nth-child(4){
             clear: both;
