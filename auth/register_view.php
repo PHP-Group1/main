@@ -96,6 +96,13 @@
             background: #442C2C;
             font-size: 24px;
             line-height: 29px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
         }
         
         form{

@@ -64,6 +64,7 @@
             text-align: center;
             letter-spacing: 0.05em;
             color: #FFFFFF;
+            cursor: pointer;
         }
         .listen_title > span{
             -webkit-text-stroke: 2px #AB6700;
@@ -91,9 +92,16 @@
         <div class="listen_box">
             <div class="listen_title"><span id="listen_title">하하</span></div>
             <div class="listen_contents"></div>
-            <div class="another">다른말도 듣고 싶어요!</div>
+            <div class="another" id = "another">다른말도 듣고 싶어요!</div>
         </div>
     </div>
-</body>
+    <script>
+        let Another = document.querySelector('#another');
 
+        Another.addEventListener('click' , () => {
+            location.href = `http://localhost:80/main/view/listen/listen_con.php`;
+        })
+
+    </script>
+</body>
 </html>
