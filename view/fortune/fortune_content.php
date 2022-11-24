@@ -33,7 +33,7 @@
             color:#ffffff;
             margin: auto;
 
-            width: 841px;
+            width: 800px;
             height: 134px;
 
             -webkit-text-stroke: 6px #AB6700;
