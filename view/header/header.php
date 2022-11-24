@@ -72,7 +72,7 @@
             })
             let qna = document.querySelector('#qna');
             qna.addEventListener('click', () => {
-                
+                location.href = `${root}view/Qna/req_content.php`;
             })
             let home = document.querySelector('#logo');
             home.addEventListener('click', () => {

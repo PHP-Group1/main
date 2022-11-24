@@ -10,12 +10,19 @@
             margin: 0;
             padding: 0;
         }
+        .qna_con_box{
+            width:100%;
+            height:971px;
+            margin:0;
+            padding:0;
+        }
         .req_con{
+            position:absolute;
+            left:20%;
             margin: 0;
             padding: 0;
-            width: 100%;
+            width: 80%;
             height: 971px;
-
             background: #FFFDF5;
             
             display: flex;
@@ -57,14 +64,24 @@
     </style>
 </head>
 <body>
-    <header></header>
-    <nav>
-    </nav>
-    <div class = "req_con">
-        <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+        ?>
+    </header>
+    <div class = "qna_con_box">
+        <nav>
+            <?php
+                include $_SERVER["DOCUMENT_ROOT"]."/main/view/side/req_side.php";
+            ?>
+        </nav>
+        <div class = "req_con">
+            <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
             <textarea class = "input_box" name = "request"></textarea>
-        <button class = "submit">보내기</button>
+            <button class = "submit">보내기</button>
+        </div>
     </div>
+    
     
 </body>
 </html>
