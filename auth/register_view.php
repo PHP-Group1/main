@@ -132,6 +132,11 @@
     </style>
 </head>
 <body>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php"
+        ?>
+    </header>
     <div class = "contents">
         <div class = 'signup'>회원가입</div><hr class = "line">
         <form id="register" action="service/register.php" method="POST">

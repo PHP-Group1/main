@@ -14,7 +14,7 @@
             width: 100%;
             height: 971px;
             background-color: #FFFDF5;
-            padding-top: 50px;
+            padding-top: 100px;
             
         }
         .cookie_box{
@@ -39,7 +39,9 @@
             -webkit-text-stroke: 6px #AB6700;
         }
         .cookie_box>div{
-            background-color: aqua;
+            background-image: url('../../img/cookie/single_cookie.png');
+            background-repeat: no-repeat;
+            background-size:cover;
             width: 340px;
             height: 340px;
             float: left;
@@ -63,6 +65,16 @@
     </style>
 </head>
 <body>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+        ?>
+    </header>
+    <nav>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_fortune.php";
+        ?>
+    </nav>
     <div class = "fortune_content">
         <div class = "cookie_box">
             <div class = "cookie1"></div>

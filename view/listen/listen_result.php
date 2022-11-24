@@ -24,6 +24,7 @@
             height: 811px;
             width: 1342px;
             margin: auto;
+            margin-top: 50px;
         }
 
         .listen_title {
@@ -76,6 +77,16 @@
 </head>
 
 <body>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
+        ?>
+    </header>
+    <nav>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
+        ?>
+    </nav>
     <div class="listen_r">
         <div class="listen_box">
             <div class="listen_title"><span id="listen_title">하하</span></div>
