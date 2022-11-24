@@ -22,6 +22,7 @@
             height: 837px;
             width: 1364px;
             margin: auto;
+            margin-top: 50px;
 
         }
         .contents_box>div{
@@ -60,6 +61,16 @@
     </style>
 </head>
 <body>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+        ?>
+    </header>
+    <nav>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav.php";
+        ?>
+    </nav>
     <div class = "main_page">
         <div class = "contents_box">
             <div class = "content1"></div>

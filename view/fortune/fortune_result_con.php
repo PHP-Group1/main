@@ -18,28 +18,43 @@
             padding-top: 50px;
         }
         .cookie_img{
-            width: 1207px;
-            height: 292px;
             margin: auto;
             margin-bottom: 50px;
-            background-color: blue;
+
+            background-image: url('../../img/cookie/result_cookie.png');
+            background-repeat: no-repeat;
+            background-size:cover;
+            width:800px;
+            height:292px;
         }
         .fortune_text{
             width: 80%;
             height: 454px;
+
             margin: auto;
             background-color: white;
-
             border: 5px solid #A55E0B;
         }
     </style>
 </head>
 <body>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+        ?>
+    </header>
+    <nav>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_fortune.php";
+        ?>
+    </nav>
     <div class = "f_result_con">
-        <div class = "cookie_img">
-            
+        <div class = "cookie_img"></div>
+        <div class = "fortune_text">
+            <span>
+
+            </span>
         </div>
-        <div class = "fortune_text"></div>
     </div>
     
 </body>

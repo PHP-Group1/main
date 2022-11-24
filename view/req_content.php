@@ -57,6 +57,9 @@
     </style>
 </head>
 <body>
+    <header></header>
+    <nav>
+    </nav>
     <div class = "req_con">
         <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
             <textarea class = "input_box" name = "request"></textarea>

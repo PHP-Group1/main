@@ -26,9 +26,6 @@
         .select_listen > div{
             width: 331px;
             height: 491px;
-
-            background: #E4FFDD;
-            border-radius: 20px;
             float: left;
         }
         .cheer{
@@ -40,13 +37,10 @@
         .nag{
             margin-right: 24px;
         }
-        .comfort{
-            
-        }
         .listen_text{
             font-weight: 700;
             font-size: 60px;
-            width: 752px;
+            width: 690px;
             height: 73px;
 
             margin: auto;
@@ -54,30 +48,64 @@
 
             color: #AB6700;
         }
+        .cheer_img{
+            background: #E4FFDD;
+            border-radius: 20px;
+            background-image: url('../../img/listen/cheer.png');
+            width: 331px;
+            height: 491px;
+        }
+        .comple_img{
+            width: 331px;
+            height: 491px;
+            background: #FFF4D9;
+            border-radius: 20px;
+            background-image: url('../../img/listen/com.png');
+        }
+        .nag_img{
+            width: 331px;
+            height: 491px;
+            background: #FFDDDD;
+            border-radius: 20px;
+            background-image: url('../../img/listen/nag.png');
+        }
+        .comfort_img{
+            width: 331px;
+            height: 491px;
+            background: #DDEFFF;
+            border-radius: 20px;
+            background-image: url('../../img/listen/comfort.png');
+        }
     </style>
 </head>
 <body>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
+        ?>
+    </header>
+    <nav>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
+        ?>
+    </nav>
     <div class = "listen_con">
         <div class = "select_listen">
             <!--응원의 말-->
             <div class = "cheer">
                 <div class = "cheer_img"></div>
-                <di class = "cheer_text"></di>
             </div>
             <!--칭찬의 말-->
             <div class = "comple">
                 <div class = "comple_img"></div>
-                <div class = "comple_text"></div>
             </div>
             <!--잔소리의 말-->
             <div class = "nag">
                 <div class = "nag_img"></div>
-                <div class = "nag_text"></div>
             </div>
             <!--위로의 말-->
             <div class = "comfort">
                 <div class = "comfort_img"></div>
-                <div class = "comfort_text"></div>
             </div>
             
         </div>
