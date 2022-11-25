@@ -80,7 +80,7 @@
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
         ?>
     </header>
     <nav>

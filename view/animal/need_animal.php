@@ -5,7 +5,6 @@
     <style>
         .c1 {
             color: #AB6700;
-            ;
             position: relative;
         }
 

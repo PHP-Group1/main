@@ -14,7 +14,7 @@
       }
       .employ_box{
          width:80%;
-         height: 901px;
+         height: 100vh;
 
          position: absolute;
          left:20%;
@@ -39,13 +39,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
-
 <body>
    <header>
       <?php
          include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
       ?>
    </header>
+   
    <div class ="qna_con_box">
       <aside>
          <?php

@@ -22,7 +22,7 @@
             margin: 0;
             padding: 0;
             width: 80%;
-            height: 971px;
+            height: 100vh;
             background: #FFFDF5;
             
             display: flex;
@@ -31,7 +31,7 @@
         
         .text{
             position:absolute;
-            top:190px;
+            top:150px;
             padding: 0;
             margin: 0;
 
@@ -42,7 +42,7 @@
 
         .input_box{
             position: absolute;
-            top: 260px;
+            top: 230px;
             width: 937px;
             height: 455px;
             resize: none;
@@ -51,7 +51,7 @@
             position: absolute;
             margin:0;
             padding:0;
-            top: 737px;
+            top: 700px;
             left: 76%;
             width: 109px;
             height: 48px;

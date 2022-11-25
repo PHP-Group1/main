@@ -50,7 +50,7 @@
     </header>
     <nav>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_item.php";
         ?>
     </nav>
     <div class="box3"></div>

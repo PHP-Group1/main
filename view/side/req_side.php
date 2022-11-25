@@ -19,7 +19,7 @@
         .side{
             position: absolute;
             width: 20%;
-            height: 971px;
+            height: 100vh;
             margin:0;
             padding: 0;
 
@@ -86,18 +86,18 @@
         </div>
     </div>
     <script>
-        let req = document.getElementById('#req');
+        let req = document.querySelector('#req');
 
         req.addEventListener('click', () => {
             location.href = "http://localhost:80/main/view/Qna/req_content.php";
         })
 
-        let employ = document.getElementById('#employ');
+        let employ = document.querySelector('#employ');
         employ.addEventListener('click', () => {
             location.href = "http://localhost:80/main/view/Qna/employ_content.php";
         })
 
-        let board = document.getElementById('#board');
+        let board = document.querySelector('#board');
         board.addEventListener('click', () => {
             location.href = "http://localhost:80/main/view/Qna/board_content.php";
         })
