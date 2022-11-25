@@ -11,8 +11,8 @@
             padding: 0;
         }
         .listen_con{
-            width: 100%;
-            height: 901px;
+            width: 100vw;
+            height:100vh;
 
             padding-top: 96px;
             background-color: #FFFDF5;
@@ -22,6 +22,7 @@
             padding: auto;
             width: 1396px;
             height: 491px;
+            margin-top: 50px;
         }
         .select_listen > div{
             width: 331px;
@@ -81,7 +82,7 @@
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
         ?>
     </header>
     <nav>

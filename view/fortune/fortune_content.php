@@ -11,8 +11,8 @@
             padding: 0;
         }
         .fortune_content{
-            width: 100%;
-            height: 971px;
+            width: 100vw;
+            height:100vh;
             background-color: #FFFDF5;
             padding-top: 100px;
         }

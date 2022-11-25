@@ -105,20 +105,45 @@
 <body>
     <div class = "navbar">
         <div class = "todayLuck" id = "todayluck">오늘의 운세</div>
-        <div class = "animal">띠 운세</div>
-        <div class = "star">별자리 운세</div>
-        <div class = "listen" >듣고싶은 말</div>
+        <div class = "animal" id = "animal">띠 운세</div>
+        <div class = "star" id = "star">별자리 운세</div>
+        <div class = "listen" id = "listen">듣고싶은 말</div>
         <div class = "fortune" id = "fortune">포춘쿠키</div>
-        <div class = "item">행운의 아이템</div>
+        <div class = "item" id = "item">행운의 아이템</div>
     </div>
     <script>
-        let todayLuck = document.querySelector("#todayLuck");
+        let todayluck = document.querySelector("#todayluck");
+
         todayluck.addEventListener("click", () => {
-            location.href = `${root}`
+            location.href = `${root}view/today/need_today.php`;
         })
+        let animal = document.querySelector('#animal');
+
+        animal.addEventListener('click', () => {
+            location.href = `${root}view/animal/need_animal.php`;
+        })
+        let star = document.querySelector('#star');
+
+        star.addEventListener('click', () => {
+            location.href = `${root}view/star/need_star.php`;
+        })
+
+        let listen = document.querySelector('#listen');
+
+        listen.addEventListener('click', () => {
+            location.href = `${root}view/listen/listen_con.php`;
+        })
+
         let forTune = document.querySelector("#fortune");
+
         forTune.addEventListener("click", () => {
             location.href = `${root}/view/fortune/fortune_content.php`
+        })
+
+        let item = document.querySelector('#item');
+
+        item.addEventListener('click', () => {
+            location.href = `${root}/view/item/need_item.php`
         })
     </script>
 </body>

@@ -10,12 +10,19 @@
             margin: 0;
             padding: 0;
         }
+        .qna_con_box{
+            width:100%;
+            height:971px;
+            margin:0;
+            padding:0;
+        }
         .req_con{
+            position:absolute;
+            left:20%;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 971px;
-
+            width: 80%;
+            height: 100vh;
             background: #FFFDF5;
             
             display: flex;
@@ -24,7 +31,7 @@
         
         .text{
             position:absolute;
-            top:190px;
+            top:150px;
             padding: 0;
             margin: 0;
 
@@ -35,7 +42,7 @@
 
         .input_box{
             position: absolute;
-            top: 260px;
+            top: 230px;
             width: 937px;
             height: 455px;
             resize: none;
@@ -44,7 +51,7 @@
             position: absolute;
             margin:0;
             padding:0;
-            top: 737px;
+            top: 700px;
             left: 76%;
             width: 109px;
             height: 48px;
@@ -57,14 +64,24 @@
     </style>
 </head>
 <body>
-    <header></header>
-    <nav>
-    </nav>
-    <div class = "req_con">
-        <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
+    <header>
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+        ?>
+    </header>
+    <div class = "qna_con_box">
+        <nav>
+            <?php
+                include $_SERVER["DOCUMENT_ROOT"]."/main/view/side/req_side.php";
+            ?>
+        </nav>
+        <div class = "req_con">
+            <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
             <textarea class = "input_box" name = "request"></textarea>
-        <button class = "submit">보내기</button>
+            <button class = "submit">보내기</button>
+        </div>
     </div>
+    
     
 </body>
 </html>

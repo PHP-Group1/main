@@ -13,8 +13,8 @@
         .main_page{
             padding: 0;
             margin: 0;
-            width: 100%;
-            height: 901px;
+            width: 100vw;
+            height: 971px;
             background-color: #FFFDF5;
             padding-top: 50px;
         }
@@ -72,22 +72,41 @@
     <div class = "main_page">
         <div class = "contents_box">
             <!--포춘쿠키-->
-            <a href = "http://localhost:80/main/view/fortune/fortune_content.php">
                 <div class = "content1" id = "fortune_cookie"></div>
-            </a>
             <!--오늘의 운세-->
-            <a href = "http://localhost:80/main/view/">
                 <div class = "content2" id = "todayLuck_con"></div>
-            </a>
             <!--듣고싶은 말-->
-            <a href = "http://localhost:80/main/view/listen/need_listen.php"">
                 <div class = "content3" id = "listen_con"></div>
-            </a>
             <!--행운의 아이템-->
-            <a href = "">
                 <div class = "content4" id = "luckyItem_con"></div>
-            </a>
         </div>
     </div>
+    <div style = "background-color: blue; width:100%; heigh:115px;">
+        <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/address.php";
+        ?>
+    </div>
+   
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+       $(document).ready (() => {
+            $('#fortune_cookie').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
+            })
+
+            $('#todayLuck_con').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/today/need_today.php")
+            })
+
+            $('#listen_con').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
+            })
+
+            $('#luckyItem_con').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/item/need_item.php")
+            })
+            
+        })
+    </script>
 </body>
 </html>
