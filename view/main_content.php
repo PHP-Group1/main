@@ -99,7 +99,7 @@
             })
 
             $('#listen_con').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/listen/need_listen.php")
+                $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
             })
 
             $('#luckyItem_con').click(() => {
