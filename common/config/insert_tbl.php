@@ -1,6 +1,6 @@
 <?php
 
-    require 'conn.php';
+    require 'common.php';
 
     $name = $_POST['name'];
     $id = $_POST['id'];
@@ -24,7 +24,7 @@
 
         echo "
         <script>
-        <alert>('회원가입을 완료하였습니다.');
+            alert('회원가입을 완료하였습니다.');
         </script>
         ";
     }
@@ -32,7 +32,7 @@
     {
         echo "
         <script>
-        <alert>('중복된 아이디입니다. 다시입력하여주세요.');
+            alert('중복된 아이디입니다. 다시입력하여주세요.');
         </script>
         ";
     }
