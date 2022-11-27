@@ -76,15 +76,31 @@
     </nav>
     <div class = "fortune_content">
         <div class = "cookie_box">
-            <div class = "cookie1"></div>
-            <div class = "cookie2"></div>
-            <div class = "cookie3"></div>
-            <div class = "cookie4"></div>
-            <div class = "cookie5"></div>
-            <div class = "cookie6"></div>
+            <div class = "cookie1" id="cookie"></div>
+            <div class = "cookie2" id="cookie">></div>
+            <div class = "cookie3" id="cookie">></div>
+            <div class = "cookie4" id="cookie">></div>
+            <div class = "cookie5" id="cookie">></div>
+            <div class = "cookie6" id="cookie">></div>
         </div>
          <div class = "select_cookie_text">쿠키를 골라주세요</div>
         
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    <script>
+
+        let cookie = $('[id = "cookie"]')
+        let num;
+
+        $(document).ready(() => {
+            cookie.click(() => {
+                num = Math.floor(Math.random() * cookie.length + 1);
+            })
+        })
+
+    </script>
+
 </body>
 </html>
