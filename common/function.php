@@ -39,7 +39,7 @@
         
         session_start();
 
-        if (!$_SESSION) {
+        if (!isset($_SESSION)) {
             include "header.php";
         } else {
     
