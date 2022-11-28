@@ -1,14 +1,16 @@
 <?php
-use LDAP\Result;
 
     require '../../common/common.php';
 
+    session_start();
+
     $title = $_POST['title'];
     $content = $_POST['content'];
+    $user_id = $_SESSION['id'];
 
     //user_id는 임시적으로 직접 기입하였음
     $sql = "INSERT INTO tbl_board(user_id,title,content)
-            VALUES ('asdf7890','$title','$content')";
+            VALUES ('$user_id','$title','$content')";
 
     $URL = '../../common/config/index_tbl.php';
     
@@ -39,9 +41,5 @@ use LDAP\Result;
         <?php
 
     }
-
-
-    
-
 
 ?>
