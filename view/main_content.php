@@ -81,7 +81,7 @@
                 <div class = "content4" id = "luckyItem_con"></div>
         </div>
     </div>
-    <div style = "background-color: blue; width:100%; heigh:115px;">
+    <div style = "background-color: blue; width:100%; height:115px;">
         <?php
             include $_SERVER["DOCUMENT_ROOT"]."/main/view/address.php";
         ?>
