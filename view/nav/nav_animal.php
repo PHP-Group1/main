@@ -122,40 +122,33 @@
         <div class = "fortune" id = "fortune">포춘쿠키</div>
         <div class = "item" id = "item">행운의 아이템</div>
     </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        let todayluck = document.querySelector("#todayluck");
+         $(document).ready (() => {
+            $('#todayluck').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/today/need_today.php")
+            })
 
-        todayluck.addEventListener("click", () => {
-            location.href = `${root}view/today/need_today.php`;
-        })
+            $('#animal').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/animal/need_animal.php")
+            })
 
-        let animal = document.querySelector('#animal');
+            $('#star').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/star/need_star.php")
+            })
 
-        animal.addEventListener('click', () => {
-            location.href = `${root}view/animal/need_animal.php`;
-        })
-        let star = document.querySelector('#star');
+            $('#listen').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
+            })
 
-        star.addEventListener('click', () => {
-            location.href = `${root}view/star/need_star.php`;
-        })
+            $('#fortune').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
+            })
 
-        let listen = document.querySelector('#listen');
-
-        listen.addEventListener('click', () => {
-            location.href = `${root}view/listen/listen_con.php`;
-        })
-
-        let forTune = document.querySelector("#fortune");
-
-        forTune.addEventListener("click", () => {
-            location.href = `${root}/view/fortune/fortune_content.php`
-        })
-
-        let item = document.querySelector('#item');
-
-        item.addEventListener('click', () => {
-            location.href = `${root}/view/item/need_item.php`
+            $('#item').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/item/need_item.php")
+            })
+            
         })
     </script>
 </body>
