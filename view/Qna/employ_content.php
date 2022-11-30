@@ -10,11 +10,10 @@
       }
       .qna_con_box{
          width:100%;
-         height: 971px;
+         height: 100vh;
       }
       .employ_box{
          width:80%;
-         height: 100vh;
 
          position: absolute;
          left:20%;
@@ -31,7 +30,7 @@
 
          display: flex;
          align-items: center;
-         margin-top: 445px;
+         margin-top: 350px;
       }
    </style>
    <meta charset="UTF-8">

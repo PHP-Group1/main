@@ -25,7 +25,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 10%;
+            left: 2%;
 
             font-weight: 400;
             font-size: 28px;
@@ -40,7 +40,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 25%;
+            left: 19%;
 
             font-weight: 400;
             font-size: 28px;
@@ -53,7 +53,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 36%;
+            left: 35%;
 
             font-weight: 400;
             font-size: 28px;
@@ -66,7 +66,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 50%;
+            left: 53%;
 
             font-weight: 400;
             font-size: 28px;
@@ -79,7 +79,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 66%;
+            left: 72%;
 
             font-weight: 400;
             font-size: 28px;
@@ -92,7 +92,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 80%;
+            left: 87%;
 
             font-weight: 400;
             font-size: 28px;
