@@ -84,8 +84,8 @@
             <div class = "cookie6" id = "fortune6"></div>
         </div>
          <div class = "select_cookie_text">쿠키를 골라주세요</div>
-        
     </div>
+
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(() => {

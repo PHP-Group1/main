@@ -1,7 +1,7 @@
 <?php
 
     require 'config/conn.php';
-    require '../../auth/service/cookie.php';
+    require '../auth/service/cookie.php';
 
     function sqlResult($sql) {
         global $conn;
@@ -18,6 +18,7 @@
         global $available;
         setcookie($cookieName, $value, time() + $available);
     }
+
     function loginCheck($logined, $not) {
         session_start();
 
@@ -38,7 +39,7 @@
         
         session_start();
 
-        if (!$_SESSION) {
+        if (!isset($_SESSION)) {
             include "header.php";
         } else {
     
@@ -50,5 +51,4 @@
             
         }
     }
-
 ?>
