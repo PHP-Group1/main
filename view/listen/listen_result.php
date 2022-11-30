@@ -95,12 +95,15 @@
             <div class="another" id = "another">다른말도 듣고 싶어요!</div>
         </div>
     </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        let Another = document.querySelector('#another');
-
-        Another.addEventListener('click' , () => {
-            location.href = `http://localhost:80/main/view/listen/listen_con.php`;
+        $(document).ready(() => {
+            $('#another').click(() => {
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_con.php');
+            })
         })
+
+
 
     </script>
 </body>
