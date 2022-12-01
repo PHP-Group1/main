@@ -1,7 +1,7 @@
 <?php
 
     require 'config/conn.php';
-    require '../auth/service/cookie.php';
+    require $_SERVER["DOCUMENT_ROOT"]."/main/auth/service/cookie.php";
 
     function sqlResult($sql) {
         global $conn;

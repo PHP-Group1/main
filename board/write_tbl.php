@@ -1,7 +1,7 @@
 <html>
 <head>
     <body>
-        <form action="write_success.php" method="post">
+        <form action="service/write_success.php" method="post">
         <div style="width:600">
         <p style="text-align:center">필요한 정보를 입력하여주세요.</p>
         <input type="title" name="title" placeholder="제목을 입력하여주세요." style="width:600px;"><hr>
