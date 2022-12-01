@@ -3,7 +3,7 @@
 
     //    $user_id = $_POST['user_id'];
     //   $title = $_POST['title'];
-    $conn = mysqli_connect("210.90.136.10", "pino", "qwer1595", "php");
+    $conn = mysqli_connect("210.223.18.224", "pino", "qwer1595", "php");
     $sql = "SELECT * FROM tbl_board";
     $result = mysqli_query($conn,$sql);
     $num = mysqli_num_rows($result);
