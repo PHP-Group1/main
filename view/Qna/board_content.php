@@ -15,7 +15,6 @@
         .board_box {
             width: 80%;
             height: 100vh;
-
             position: absolute;
             left: 20%;
             background: #FFFDF5;

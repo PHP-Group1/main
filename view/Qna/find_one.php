@@ -33,33 +33,16 @@
             width: 794px;
             height: 64px;
             margin-bottom: 17px;
-            font-weight: 400;
-            font-size: 25px;
-            line-height: 30px;
+            background-color: white;
 
             border: 2px solid #000000;
         }
         .input_content{
             width: 797px;
             height: 662px;
-            font-weight: 400;
-            font-size: 25px;
-            line-height: 30px;
+            background-color: white;
 
             border: 2px solid #000000;
-        }
-        .send{
-            margin:0;
-            padding:0;
-            width: 109px;
-            height: 48px;
-            float:right;
-            margin-top: 22px;
-
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 39px;
-            background-color: #FFFDF5;
         }
     </style>
 </head>
@@ -78,9 +61,8 @@
         <div class = "write_con">
             <div class = "wrap_write">
                 <form action="write_success.php" method="post">
-                        <input type="title" class = "input_title" name="title" placeholder="제목을 입력하여주세요.">
-                        <textarea class = "input_content" name="content" placeholder="내용을 입력하여주세요."></textarea>
-                        <input type="submit" value="보내기" class = "send">
+                        <div class = "input_title"></div>
+                        <div class = "input_content"></div>
                     </div>
                 </form>
         </div>
