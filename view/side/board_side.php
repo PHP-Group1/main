@@ -19,7 +19,7 @@
         .side{
             position: absolute;
             width: 20%;
-            height: 100vh;
+            height: 971px;
             margin:0;
             padding: 0;
 

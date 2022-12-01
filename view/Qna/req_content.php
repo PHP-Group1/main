@@ -12,7 +12,7 @@
         }
         .qna_con_box{
             width:100%;
-            height:971px;
+            height:100vh;
             margin:0;
             padding:0;
         }
@@ -20,20 +20,21 @@
             position:absolute;
             left:20%;
             margin: 0;
-            padding: 0;
             width: 80%;
             height: 100vh;
             background: #FFFDF5;
-            
-            display: flex;
-            justify-content : center;
         }
-        
+        .wrap{
+            height: 595px;
+            width: 937px;
+            margin: 130px auto;
+        }
         .text{
-            position:absolute;
-            top:150px;
             padding: 0;
-            margin: 0;
+            margin: auto;
+            margin-bottom: 22px;
+            width:600px;
+            height:48px;
 
             font-weight: 700;
             font-size: 40px;
@@ -41,20 +42,17 @@
         }
 
         .input_box{
-            position: absolute;
-            top: 230px;
-            width: 937px;
+            width: 931px;
             height: 455px;
             resize: none;
         }
         .submit{
-            position: absolute;
             margin:0;
             padding:0;
-            top: 700px;
-            left: 76%;
             width: 109px;
             height: 48px;
+            float:right;
+            margin-top: 22px;
 
             font-weight: 700;
             font-size: 32px;
@@ -76,9 +74,11 @@
             ?>
         </nav>
         <div class = "req_con">
-            <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
-            <textarea class = "input_box" name = "request"></textarea>
-            <button class = "submit">보내기</button>
+            <div class = "wrap">
+                <div class = "text">요구사항 및 개선사항을 입력해주세요</div>
+                <textarea class = "input_box" name = "request"></textarea>
+                <button class = "submit">보내기</button>
+            </div>
         </div>
     </div>
     
