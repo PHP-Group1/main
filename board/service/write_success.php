@@ -6,13 +6,13 @@
 
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $user_id = $_SESSION['id'];
+    // $user_id = $_SESSION['id'];
 
     //user_id는 임시적으로 직접 기입하였음
     $sql = "INSERT INTO tbl_board(user_id,title,content)
-            VALUES ('$user_id','$title','$content')";
+            VALUES ('qwer1234','$title','$content')";
 
-    $URL = '../../common/config/index_tbl.php';
+    $URL = 'index_tbl.php';
     
 
     if($title == null){
