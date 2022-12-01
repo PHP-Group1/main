@@ -94,24 +94,42 @@
         <div class = "select_listen">
             <!--응원의 말-->
             <div class = "cheer">
-                <div class = "cheer_img"></div>
+                <div class = "cheer_img" id = "cheer"></div>
             </div>
             <!--칭찬의 말-->
             <div class = "comple">
-                <div class = "comple_img"></div>
+                <div class = "comple_img" id = "comple"></div>
             </div>
             <!--잔소리의 말-->
             <div class = "nag">
-                <div class = "nag_img"></div>
+                <div class = "nag_img" id = "nag"></div>
             </div>
             <!--위로의 말-->
             <div class = "comfort">
-                <div class = "comfort_img"></div>
+                <div class = "comfort_img" id = "comfort"></div>
             </div>
             
         </div>
         <div class = "listen_text">오늘은 어떤말이 듣고싶나요?</div>
     </div>
-    
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('#cheer').click(() => {
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php'); 
+            })
+           $('#comple').click(() => {
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php');
+            })
+            $('#nag').click(() => {
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php');
+            })
+            $('#comfort').click(() => {
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php');
+            })
+            
+        })
+
+    </script>
 </body>
 </html>

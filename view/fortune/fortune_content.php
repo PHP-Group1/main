@@ -76,31 +76,39 @@
     </nav>
     <div class = "fortune_content">
         <div class = "cookie_box">
-            <div class = "cookie1" id="cookie"></div>
-            <div class = "cookie2" id="cookie">></div>
-            <div class = "cookie3" id="cookie">></div>
-            <div class = "cookie4" id="cookie">></div>
-            <div class = "cookie5" id="cookie">></div>
-            <div class = "cookie6" id="cookie">></div>
+            <div class = "cookie1" id = "fortune1"></div>
+            <div class = "cookie2" id = "fortune2"></div>
+            <div class = "cookie3" id = "fortune3"></div>
+            <div class = "cookie4" id = "fortune4"></div>
+            <div class = "cookie5" id = "fortune5"></div>
+            <div class = "cookie6" id = "fortune6"></div>
         </div>
          <div class = "select_cookie_text">쿠키를 골라주세요</div>
-        
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-
-        let cookie = $('[id = "cookie"]')
-        let num;
-
         $(document).ready(() => {
-            cookie.click(() => {
-                num = Math.floor(Math.random() * cookie.length + 1);
+            $('#fortune1').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_result_con.php")
             })
+            $('#fortune2').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_result_con.php")
+            })
+            $('#fortune3').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_result_con.php")
+            })
+            $('#fortune4').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_result_con.php")
+            })
+            $('#fortune5').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_result_con.php")
+            })
+            $('#fortune6').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_result_con.php")
+            })
+
         })
-
     </script>
-
 </body>
 </html>

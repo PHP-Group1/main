@@ -25,7 +25,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 10%;
+            left: 2%;
 
             font-weight: 400;
             font-size: 28px;
@@ -38,7 +38,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 25%;
+            left: 19%;
 
             font-weight: 400;
             font-size: 28px;
@@ -51,7 +51,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 36%;
+            left: 35%;
 
             font-weight: 400;
             font-size: 28px;
@@ -64,7 +64,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 50%;
+            left: 53%;
 
             font-weight: 400;
             font-size: 28px;
@@ -77,7 +77,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 66%;
+            left: 72%;
 
             font-weight: 400;
             font-size: 28px;
@@ -90,7 +90,7 @@
             padding: 0;
             position: absolute;
             top : 16px;
-            left: 80%;
+            left: 87%;
 
             font-weight: 400;
             font-size: 28px;
@@ -111,39 +111,32 @@
         <div class = "fortune" id = "fortune">포춘쿠키</div>
         <div class = "item" id = "item">행운의 아이템</div>
     </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        let todayluck = document.querySelector("#todayluck");
+        $(document).ready (() => {
+            $('#todayluck').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/today/need_today.php")
+            })
 
-        todayluck.addEventListener("click", () => {
-            location.href = `${root}view/today/need_today.php`;
-        })
-        let animal = document.querySelector('#animal');
+            $('#animal').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/animal/need_animal.php")
+            })
 
-        animal.addEventListener('click', () => {
-            location.href = `${root}view/animal/need_animal.php`;
-        })
-        let star = document.querySelector('#star');
+            $('#star').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/star/need_star.php")
+            })
 
-        star.addEventListener('click', () => {
-            location.href = `${root}view/star/need_star.php`;
-        })
+            $('#listen').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
+            })
 
-        let listen = document.querySelector('#listen');
+            $('#fortune').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
+            })
 
-        listen.addEventListener('click', () => {
-            location.href = `${root}view/listen/listen_con.php`;
-        })
-
-        let forTune = document.querySelector("#fortune");
-
-        forTune.addEventListener("click", () => {
-            location.href = `${root}/view/fortune/fortune_content.php`
-        })
-
-        let item = document.querySelector('#item');
-
-        item.addEventListener('click', () => {
-            location.href = `${root}/view/item/need_item.php`
+            $('#item').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/item/need_item.php")
+            })
         })
     </script>
 </body>

@@ -62,6 +62,7 @@
         .img{
             width: 236px;
             height: 236px;
+            margin-bottom: 20px;
         }
         .todayluck_box > div {
             width: 1360px;
