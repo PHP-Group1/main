@@ -3,7 +3,7 @@
 
     $idx = $_GET['idx'];
 
-    $conn = mysqli_connect("210.90.136.10", "pino", "qwer1595", "php");
+    $conn = mysqli_connect("210.223.18.224", "pino", "qwer1595", "php");
     $sql = "SELECT user_id, title, content
             FROM tbl_board
             WHERE idx = $idx";
