@@ -36,6 +36,7 @@
             font-weight: 400;
             font-size: 25px;
             line-height: 30px;
+            background-color: #FFFDF5;
 
             border: 2px solid #000000;
         }
@@ -45,6 +46,7 @@
             font-weight: 400;
             font-size: 25px;
             line-height: 30px;
+            background-color: #FFFDF5;
 
             border: 2px solid #000000;
         }

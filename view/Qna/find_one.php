@@ -33,14 +33,12 @@
             width: 794px;
             height: 64px;
             margin-bottom: 17px;
-            background-color: white;
 
             border: 2px solid #000000;
         }
         .input_content{
             width: 797px;
             height: 662px;
-            background-color: white;
 
             border: 2px solid #000000;
         }
