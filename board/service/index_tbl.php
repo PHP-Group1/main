@@ -151,7 +151,7 @@ $start = ($page - 1) * $list_num;
                 ?>
                 </div>
 
-                <a class = "write_b"href="write_tbl.php">
+                <a class = "write_b"href="../write_tbl.php">
                     <p class = "write">글쓰기</p>
                 </a>
 

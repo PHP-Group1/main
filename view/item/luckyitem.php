@@ -36,8 +36,8 @@
         }
 
         .item_img {
-            width: 180px;
-            height: 180px;
+            width: 242px;
+            height: 242px;
             background-image: url("../../img/item/lucky_item.png");
 
             margin: auto;
@@ -66,8 +66,8 @@
         }
 
         .color_img {
-            width: 180px;
-            height: 180px;
+            width: 242px;
+            height: 242px;
             background-image: url("../../img/item/lucky_color.png");
 
             margin: auto;
@@ -96,8 +96,8 @@
         }
 
         .num_img {
-            width: 180px;
-            height: 180px;
+            width: 242px;
+            height: 242px;
             background-image: url("../../img/item/lucky_num.png");
 
             margin: auto;

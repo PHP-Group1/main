@@ -99,7 +99,7 @@
 
         let board = document.querySelector('#board');
         board.addEventListener('click', () => {
-            location.href = "http://localhost:80/main/view/Qna/board_content.php";
+            location.href = "http://localhost:80/main/board/service/index_tbl.php";
         })
     </script>
     
