@@ -119,7 +119,7 @@
                 $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=cheer'); 
             })
            $('#comple').click(() => {
-                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=comple');
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=compli');
             })
             $('#nag').click(() => {
                 $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=nag');

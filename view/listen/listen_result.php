@@ -77,7 +77,7 @@
     </style>
 </head>
 <?php
-    require "../../common/function.php";
+    require $_SERVER["DOCUMENT_ROOT"]."/main/common/common.php";
 ?>
 
 <body>
@@ -105,7 +105,7 @@
 
         switch($listen) {
             case 'cheer': $title = "응원의 말"; break;
-            case 'comple': $title = "칭찬의 말"; break;
+            case 'compli': $title = "칭찬의 말"; break;
             case 'nag': $title = "잔소리"; break;
             case 'comfort': $title = "위로의 말"; break;
         }

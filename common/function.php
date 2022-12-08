@@ -39,15 +39,11 @@
         
         session_start();
 
-        if (!isset($_SESSION)) {
-            include "header.php";
+        if (!isset($_SESSION['user_id'])) {
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
         } else {
-    
-            if ($_SESSION['user_id']) {
-                include "login_header.php";
-            } else {
-                include "header.php";
-            }
+            
+                include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
             
         }
     }
