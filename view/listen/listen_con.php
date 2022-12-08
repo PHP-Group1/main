@@ -116,16 +116,16 @@
     <script>
         $(document).ready(() => {
             $('#cheer').click(() => {
-                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php'); 
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=cheer'); 
             })
            $('#comple').click(() => {
-                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php');
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=comple');
             })
             $('#nag').click(() => {
-                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php');
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=nag');
             })
             $('#comfort').click(() => {
-                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php');
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=comfort');
             })
             
         })

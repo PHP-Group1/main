@@ -76,11 +76,14 @@
         }
     </style>
 </head>
+<?php
+    require "../../common/function.php";
+?>
 
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+            header_check();
         ?>
     </header>
     <nav>
@@ -88,9 +91,28 @@
             include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
         ?>
     </nav>
+    <?php 
+        if (isset($_GET['listen_title'])) {
+            $listen = $_GET['listen_title'];
+        } else {
+            echo "<script>
+                    alert('잘못된 접근입니다.');
+                    history.back;
+                </script>";
+        }
+        
+        $title;
+
+        switch($listen) {
+            case 'cheer': $title = "응원의 말"; break;
+            case 'comple': $title = "칭찬의 말"; break;
+            case 'nag': $title = "잔소리"; break;
+            case 'comfort': $title = "위로의 말"; break;
+        }
+    ?>
     <div class="listen_r">
         <div class="listen_box">
-            <div class="listen_title"><span id="listen_title">하하</span></div>
+            <div class="listen_title"><span id="listen_title"><?=$title?></span></div>
             <div class="listen_contents"></div>
             <div class="another" id = "another">다른말도 듣고 싶어요!</div>
         </div>
