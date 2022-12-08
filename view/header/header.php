@@ -32,7 +32,7 @@
             line-height: 24px;  
             cursor: pointer;
         }
-        p{
+        .header > p{
             color: #ffffff;
             position: absolute;
             height: 24px;
