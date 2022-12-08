@@ -76,11 +76,14 @@
         }
     </style>
 </head>
+<?php
+    require "../../common/function.php";
+?>
 
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+            header_check();
         ?>
     </header>
     <nav>
