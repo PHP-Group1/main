@@ -1,3 +1,3 @@
 <?php
-    require 'function.php';
-    require 'config/conn.php';
+    require_once 'function.php';
+    require_once 'config/conn.php';

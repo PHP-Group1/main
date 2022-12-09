@@ -76,19 +76,17 @@
         }
     </style>
 </head>
-<?php
-    require "../../common/function.php";
-?>
 
 <body>
     <header>
         <?php
+        require_once "../../common/function.php";
             header_check();
         ?>
     </header>
     <nav>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
         ?>
     </nav>
     <?php 
@@ -105,7 +103,7 @@
 
         switch($listen) {
             case 'cheer': $title = "응원의 말"; break;
-            case 'comple': $title = "칭찬의 말"; break;
+            case 'compliment': $title = "칭찬의 말"; break;
             case 'nag': $title = "잔소리"; break;
             case 'comfort': $title = "위로의 말"; break;
         }
@@ -113,7 +111,8 @@
     <div class="listen_r">
         <div class="listen_box">
             <div class="listen_title"><span id="listen_title"><?=$title?></span></div>
-            <div class="listen_contents"></div>
+            <div class="listen_contents"><?php require_once "listenService.php";
+            echo $content;?></div>
             <div class="another" id = "another">다른말도 듣고 싶어요!</div>
         </div>
     </div>

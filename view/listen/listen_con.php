@@ -82,12 +82,12 @@
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
         ?>
     </header>
     <nav>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_listen.php";
         ?>
     </nav>
     <div class = "listen_con">
@@ -98,7 +98,7 @@
             </div>
             <!--칭찬의 말-->
             <div class = "comple">
-                <div class = "comple_img" id = "comple"></div>
+                <div class = "comple_img" id = "compliment"></div>
             </div>
             <!--잔소리의 말-->
             <div class = "nag">
@@ -118,8 +118,8 @@
             $('#cheer').click(() => {
                 $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=cheer'); 
             })
-           $('#comple').click(() => {
-                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=comple');
+           $('#compliment').click(() => {
+                $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=compliment');
             })
             $('#nag').click(() => {
                 $(location).attr('href', 'http://localhost:80/main/view/listen/listen_result.php?listen_title=nag');
