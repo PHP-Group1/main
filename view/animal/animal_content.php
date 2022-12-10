@@ -51,12 +51,15 @@
             float: left;
             width: 75%;
             height: 100%;
+            color: black;
+            line-height: 180%;
+            font-weight: bold;
         }
         .content_animal{
-            width: 900px;
+            width: 1050px;
             height: 250px;
             position: absolute;
-            top: 20%;
+            top: 30%;
             left: 5%;
         }
         .name_box{
@@ -129,7 +132,7 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
-        .swiper>img{
+        a>img{
             max-width:95%;
             max-height: 95%;
             object-fit: cover;
@@ -151,6 +154,24 @@
     <title>Document</title>
 </head>
 
+<!--스크래핑 소스--------------------------------------------------------------------------------------------------------->
+<?php 
+/* 스크래핑 모듈*/
+include('../../common/simple_html_dom.php');
+//운세 종류
+
+@$type=$_GET["type"];
+if(empty($type)){
+    $type = "쥐띠";
+}
+//$type = str_replace(' ','%20',$type);
+//echo "type : ".$type;
+//echo 'https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qvt=0&query='.$type;
+
+$html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qvt=0&query='.$type.'%20운세');
+// 전달받은 운세 종류 출력
+?>
+
 <body>
     <header>
         <?php
@@ -164,39 +185,42 @@
     </nav>
     <div class="box1">
         <div class="name_box">
-            <div id="names_animal">쥐띠</div>
+            <div id="names_animal"><?php echo $type;?></div>
         </div>
         <div class="main_box">
             <div class="photo">
-                <img id="photo_animal" class="photo_animal" src="../../img/animal/쥐.png"/>
+                <img id="photo_animal" class="photo_animal" <?php echo "src='../../img/animal/$type.png'" ?>/>
             </div>
             <div class="text">
-                <div id="content_animal" class="content_animal">나는 쥐야</div>
+                <div id="content_animal" class="content_animal"><?php echo $html->find('.detail p._cs_fortune_text',0)->outertext;?></div>
             </div>
         </div>
     </div>
-    <div class="box2">              
+    <div class="box2">            
         <div class="prev"><img src="../../img/click/좌.png"/></div>
         <div class="select">
             <section class="slides">
-            <div class="swiper"><img id="animal" src="../../img/animal/쥐.png" onclick="change1()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/소.png" onclick="change2()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/호랑이.png" onclick="change3()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/토끼.png" onclick="change4()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/용.png" onclick="change5()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/뱀.png" onclick="change6()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/말.png" onclick="change7()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/양.png" onclick="change8()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/원숭이.png" onclick="change9()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/닭.png" onclick="change10()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/개.png" onclick="change11()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="animal" src="../../img/animal/돼지.png" onclick="change12()" style="cursor: pointer;"/></div>
+            <div class="swiper"><a href="animal_content.php?type=쥐띠"><img id="animal_click" src="../../img/animal/쥐띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=소띠"><img id="animal" src="../../img/animal/소띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=호랑이띠"><img id="animal" src="../../img/animal/호랑이띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=토끼띠"><img id="animal" src="../../img/animal/토끼띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=용띠"><img id="animal" src="../../img/animal/용띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=뱀띠"><img id="animal" src="../../img/animal/뱀띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=말띠"><img id="animal" src="../../img/animal/말띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=양띠"><img id="animal" src="../../img/animal/양띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=원숭이띠"><img id="animal" src="../../img/animal/원숭이띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=닭띠"><img id="animal" src="../../img/animal/닭띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=개띠"><img id="animal" src="../../img/animal/개띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=돼지띠"><img id="animal" src="../../img/animal/돼지띠.png"/></a></div>
             </section>
         </div>
         <div class="next"><img src="../../img/click/우.png"/></div>
     </div>
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/animal_click.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+
+</script>
 </body>
 </html>
 

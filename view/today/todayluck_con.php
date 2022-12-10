@@ -9,13 +9,13 @@
         body{
             margin: 0;
             padding: 0;
+            background-color: #fffdf5;
         }
         .todayluck{
             width: 100%;
-            height: 1681px;
+            height: 100%;
             padding-top: 90px;
 
-            background-color: #fffdf5;
         }
         .todayluck_box{
             margin: auto;
@@ -30,7 +30,7 @@
             border: 4px solid #C98724;
             border-radius: 20px;
             font-weight: 700;
-            font-size: 35px;
+            font-size: 30px;
             line-height: 72px;
             text-align: center;
             letter-spacing: 0.3em;
@@ -63,9 +63,11 @@
             width: 236px;
             height: 236px;
             margin-bottom: 20px;
+            float: left;
         }
         .todayluck_box > div {
             width: 1360px;
+            height: 370px;
             border-bottom: 2px solid #B37C3A;
             margin: 46px auto;
         }
@@ -74,8 +76,32 @@
             height: 236px;
         }
 
+        .box{
+            width: 1300px;
+            height: 236px;
+            position: relative;
+        }
+
+        .contents{
+            width: 1050px;
+            height: 210px;
+            font-weight: bold;
+            line-height: 180%;
+            margin-bottom: 20px;
+            position: absolute;
+            left: 21%;
+            top: 10%;
+        }
+
     </style>
 </head>
+
+<?php
+    // 오늘날짜 출력
+    date_default_timezone_set('Asia/Seoul');
+    $today = date("Y/m/d");
+?>
+
 <body>
     <header>
         <?php
@@ -88,7 +114,7 @@
         ?>
     </nav>
     <div class = "todayluck">
-        <div class = "datebox">오늘 날짜</div>
+        <div class = "datebox"><?php echo $today;?></div>
         <div class = "todayluck_box">
             <!--금전운 내용-->
             <div class = "riches">
@@ -96,7 +122,9 @@
                 <div class = "img">
                     <img src = "../../img/today/money.png">
                 </div>
-                <div class = "riches_contents"></div>
+                <div class="box">
+                <div class = "contents" id="luck01"></div>
+                </div>
             </div>
             <!--학업운 내용-->
             <div class = "study">
@@ -104,7 +132,9 @@
                 <div class = "img">
                     <img src = "../../img/today/study.png">
                 </div>
-                <div class = "contents"></div>
+                <div class="box">
+                <div class = "contents" id="luck02"></div>
+                </div>
             </div>
             <!--직업운 내용-->
             <div class = "job">
@@ -112,7 +142,9 @@
                 <div class = "img">
                     <img src = "../../img/today/job.png">
                 </div>
-                <div class = "contents"></div>
+                <div class="box">
+                <div class = "contents" id="luck03"></div>
+                </div>
             </div>
             <!--연애운 내용-->
             <div class = "love">
@@ -120,10 +152,70 @@
                 <div class = "img">
                     <img src = "../../img/today/love.png">
                 </div>
-                <div class = "contents"></div>
+                <div class="box">
+                <div class = "contents" id="luck04"></div>
+                </div>
             </div>
         </div>
     </div>
     
 </body>
 </html>
+
+<!-- 생년월일정보 (세션에서 가져오기) -->
+<input type="hidden" id="birth" value="19990101"/>
+
+<!-- Jquery 플러그인 -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+//문서 로드 후 함수 호출
+$(document).ready(function(){
+	//생년월일 정보 가져오기
+	var birth = $("#birth").val();
+	//ajax 통신 - url로 호출해서 데이터 불러오기
+	$.ajax({
+		url:'https://m.search.naver.com/p/csearch/dcontent/external_api/json_todayunse_v2.naver?_callback=window.__jindo2_callback._fortune_my_0&gender=m&birth='+birth+'&solarCal=solar&time='
+	}).done(function(json){
+		console.log('성공');
+		//console.log(json);
+		//text로 받은 정보를 json 형식으로 변경하기
+		json = json.replace("window.__jindo2_callback._fortune_my_0(","");
+		json = json.replace(");","");
+		// json 의 속성은 "(쌍따옴표)로 묶어주어야 함
+		json = json.replace("result","\"result\"");
+		json = json.replaceAll("day","\"day\"");
+		json = json.replaceAll("title","\"title\"");
+		json = json.replaceAll("date","\"date\"");
+		json = json.replaceAll("content","\"content\"");
+		json = json.replaceAll("tomorrow","\"tomorrow\"");
+		json = json.replaceAll("month","\"month\"");
+		json = json.replaceAll("userData","\"userData\"");
+		json = json.replaceAll("year","\"year\"");
+		json = json.replaceAll("constellation","\"constellation\"");
+		json = json.replaceAll("resultMSG","\"resultMSG\"");
+		
+		//console.log(json);
+		
+		//텍스트를 Json 객체로 변환
+		var data = JSON.parse(json);
+		console.log(data.result.day.content);
+		//2 금전운 ,4 학업운 ,3 직업운 ,1 연애운
+		//console.log(data.result.day.content[2].desc);
+		//console.log(data.result.day.content[4].desc);
+		//console.log(data.result.day.content[3].desc);
+		//console.log(data.result.day.content[1].desc);
+		
+		//document.getElementById("luck01").innerText=data.result.day.content[2].desc;
+		// $("#name") = document.getElementById("name")
+		// $(".name") = document.querySeletor(".name")
+		$("#luck01").text(data.result.day.content[2].desc);
+		$("#luck02").text(data.result.day.content[4].desc);
+		$("#luck03").text(data.result.day.content[3].desc);
+		$("#luck04").text(data.result.day.content[1].desc);
+	}).fail(function(xhr,status,err){
+		console.log('실패');
+	});
+
+});
+
+</script>
