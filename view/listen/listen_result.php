@@ -112,7 +112,7 @@
         <div class="listen_box">
             <div class="listen_title"><span id="listen_title"><?=$title?></span></div>
             <div class="listen_contents"><?php require_once "listenService.php";
-            echo $content;?></div>
+            print($content);?></div>
             <div class="another" id = "another">다른말도 듣고 싶어요!</div>
         </div>
     </div>
