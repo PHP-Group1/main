@@ -8,8 +8,8 @@
         echo
             "
             <script>
-                alert('로그아웃');
-                location.href = '../login_view.php'
+                alert('로그아웃 성공');
+                location.href = 'http://localhost:80/main/auth/login_view.php';
             </script>
             ";
     } else {
@@ -17,8 +17,9 @@
             "
             <script>
                 alert('로그인 안돼있음');
-                location.href = '../login_view.php'
-            </script>
+                <script>
+                    location.href = 'http://localhost:80/main/auth/login_view.php';
+                </script>
             ";
     }
 

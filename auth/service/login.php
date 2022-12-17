@@ -35,12 +35,14 @@
             session_start();
             $_SESSION["user_id"] = $row['id'];
             $_SESSION["user_name"] = $row['name'];
+            $_SESSION["user_birth"] = $row['birth'];
+
             mysqli_close($conn);
 
             echo 
                 "<script>
                     alert('로그인 성공');
-                    location.href = '../login_view.php'
+                    location.href = '../../view/main_content.php';
                 </script>";
         }
 

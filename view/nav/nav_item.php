@@ -114,34 +114,7 @@
         <div class = "fortune" id = "fortune">포춘쿠키</div>
         <div class = "item" id = "item">행운의 아이템</div>
     </div>
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>
-        $(document).ready (() => {
-            $('#todayluck').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/today/need_today.php")
-            })
-
-            $('#animal').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/animal/need_animal.php")
-            })
-
-            $('#star').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/star/need_star.php")
-            })
-
-            $('#listen').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
-            })
-
-            $('#fortune').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
-            })
-
-            $('#item').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/item/need_item.php")
-            })
-            
-        })
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src=http://localhost:80/main/js/nav.js></script>
 </body>
 </html>

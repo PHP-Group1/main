@@ -8,7 +8,7 @@
             padding: 0;
             background-color: #FFFDF5;
         }
-        .box1{
+        .box{
             position: relative;
             width: 100vw;
             height: 490px;
@@ -179,7 +179,7 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <nav>
@@ -187,7 +187,7 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
             include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_star.php";
         ?>
     </nav>
-    <div class="box1">
+    <div class="box">
         <div class="name_box">
             <div id="names_star"><?php echo $type;?></div>
         </div>
@@ -220,6 +220,15 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
         </div>
         <div class="next"><img src="../../img/click/우.png"/></div>
     </div>
+    <?php
+
+if (!isset($_SESSION['user_id'])) {
+    echo "<script>
+                location.href = 'http://localhost:80/main/view/star/need_star.php';
+            </script>";
+}
+
+?> 
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

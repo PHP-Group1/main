@@ -22,17 +22,12 @@
     function loginCheck($logined, $not) {
         session_start();
 
-        if (!isset($_SESSION)) {
+        if (!isset($_SESSION['user_id'])) {
             include $not;
         } else {
-    
-            if ($_SESSION['user_id']) {
                 include $logined;
-            } else {
-                include $not;
-            }
-    
         }
+    
     }
 
     function header_check() {
