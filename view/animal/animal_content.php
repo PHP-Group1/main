@@ -12,7 +12,7 @@
             position: relative;
             width: 100vw;
             height: 490px;
-            padding-top: 50px;
+            margin-top: 50px;
         }
         .main_box{
             position: absolute;
