@@ -167,7 +167,7 @@
 include('../../common/simple_html_dom.php');
 
 //생년월일 세션을 가져옴
-@$birth = $_SESSION['birth'];
+@$birth = $_SESSION['user_birth'];
 
 //값이 만약에 없다면 주는 기본값
 if(empty($birth)){
