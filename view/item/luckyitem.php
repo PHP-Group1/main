@@ -1,4 +1,4 @@
-
+<?php require_once "itemService.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +123,7 @@
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/login_header.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <nav>
@@ -136,21 +136,21 @@
             <div class="item_box">
                 <div class="item_img"></div>
                 <div class="item_text">
-                    당신의 행운의 아이템은 <span><?php include_once "itemService.php"; ?></span>입니다
+                    당신의 행운의 아이템은 <span><?php print($item); ?></span>입니다
                 </div>
             </div>
 
             <div class="color_box">
                 <div class="color_img"></div>
                 <div class="color_text">
-                    당신의 행운의 색은 <span>000</span>입니다
+                    당신의 행운의 색은 <span><?php print($color); ?></span>입니다
                 </div>
             </div>
 
             <div class="num_box">
                 <div class="num_img"></div>
                 <div class="num_text">
-                    당신의 행운의 숫자는 <span>000</span>입니다
+                    당신의 행운의 숫자는 <span><?php print($number); ?></span>입니다
                 </div>
             </div>
         </div>
