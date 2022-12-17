@@ -205,9 +205,9 @@
                     &nbsp; 이용약관 및 개인정보수집 및 이용, 정보 수신에 동의합니다.
                 </label>
             <div/>
-        
+            <button type="button" class = "button" id = "register_btn">회원가입</button>
         </form>
-        <button class = "button" id = "register_btn">회원가입</button>
+        
     </div>   
     </div>
     

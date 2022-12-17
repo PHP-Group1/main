@@ -15,7 +15,7 @@
         mysqli_close($conn);
         echo 
             "<script>
-                alert('아이디 없음');
+                alert('존재하지 않는 아이디 입니다.');
                 location.href = '../login_view.php';
             </script>";
     } else {
@@ -26,7 +26,7 @@
         if ($pw != $db_pw) {
             echo 
             "<script>
-                alert('비번 틀림');
+                alert('비밀번호가 일치하지 않습니다.');
                 history.back();
             </script>";
             exit;
@@ -41,7 +41,7 @@
 
             echo 
                 "<script>
-                    alert('로그인 성공');
+                    alert('성공적으로 로그인 되었습니다.');
                     location.href = '../../view/main_content.php';
                 </script>";
         }
