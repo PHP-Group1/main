@@ -25,10 +25,10 @@
             border-radius: 20px;
         }
         .name_box{
-            position: absolute;
+            position: relative;
             top: 8%;
             left: 2.5%;
-            width: 360px;
+            width: 25%;
             height: 60px;
             background-color: #FFF1A5;
             border: 4px solid #C98724;
@@ -59,12 +59,8 @@
             width: 1050px;
             height: 250px;
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 5%;
-        }
-        .name_box{
-            width: 25%;
-            position: relative;
         }
         .name_box>div{
             position: absolute;
@@ -158,11 +154,69 @@
 <?php 
 /* 스크래핑 모듈*/
 include('../../common/simple_html_dom.php');
-//운세 종류
 
+@session_start();
+
+//생년월일 세션을 가져옴
+@$birth = $_SESSION['birth'];
+
+//값이 만약에 없다면 주는 기본값
+if(empty($birth)){
+    $birth = "1997-05-06";
+}
+
+//생년월일에서 하이푼을 삭제함
+@$birth_rep = str_replace("-", "", $birth);
+
+//생년월일에서 년도만 추출
+@$birth_year = substr($birth_rep, 0, 4);
+
+//년도에 12를 나눈 나머지 값
+@$birth_div = $birth_year % 12;
+
+//운세값, 초기값으로 회원의 띠를 출력
 @$type=$_GET["type"];
+
 if(empty($type)){
-    $type = "쥐띠";
+//나머지 값의 따른 회원의 띠를 출력
+switch($birth_div){
+    case 0:
+        $type = "원숭이띠";
+        break;
+    case 1:
+        $type = "닭띠";
+        break;
+    case 2:
+        $type = "개띠";
+        break;
+    case 3:
+        $type = "돼지띠";
+        break;
+    case 4:
+        $type = "쥐띠";
+        break;
+    case 5:
+        $type = "소띠";
+        break;
+    case 6:
+        $type = "호랑이띠";
+        break;
+    case 7:
+        $type = "토끼띠";
+        break;
+    case 8:
+        $type = "용띠";
+        break;
+    case 9:
+        $type = "뱀띠";
+        break;
+    case 10:
+        $type = "말띠";
+        break;
+    case 11:
+        $type = "양띠";
+        break;
+}
 }
 //$type = str_replace(' ','%20',$type);
 //echo "type : ".$type;
@@ -217,10 +271,6 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
         <div class="next"><img src="../../img/click/우.png"/></div>
     </div>
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8">
-
-
-</script>
 </body>
 </html>
 

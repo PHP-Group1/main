@@ -163,8 +163,22 @@
 </html>
 
 <!-- 생년월일정보 (세션에서 가져오기) -->
-<input type="hidden" id="birth" value="19990101"/>
+<?php
+session_start();
 
+//생년월일 세션을 가져옴
+@$birth = $_SESSION['birth'];
+
+//생년월일에서 하이푼을 삭제함
+@$birth_rep = str_replace("-", "", $birth);
+
+//값이 만약 비어있다면 기본값 출력
+if(empty($birth_rep)){
+    $birth_rep = "19970506";
+}
+?>
+<!-- 생년월일을 입력하여 운세를 가져오게 함 value 값에 생년월일을 넣어줌 -->
+<input type="hidden" id="birth" value="<?php echo $birth_rep ?>"/>
 <!-- Jquery 플러그인 -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
