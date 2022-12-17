@@ -142,14 +142,14 @@
             <div class="color_box">
                 <div class="color_img"></div>
                 <div class="color_text">
-                    당신의 행운의 아이템은 <span>000</span>입니다
+                    당신의 행운의 색은 <span>000</span>입니다
                 </div>
             </div>
 
             <div class="num_box">
                 <div class="num_img"></div>
                 <div class="num_text">
-                    당신의 행운의 아이템은 <span>000</span>입니다
+                    당신의 행운의 숫자는 <span>000</span>입니다
                 </div>
             </div>
         </div>
