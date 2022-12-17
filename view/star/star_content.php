@@ -49,21 +49,20 @@
             max-height: 80%;
         }
         .text{
-            position: relative;
             float: left;
-            width: 75%;
-            height: 100%;
             color: black;
-            line-height: 180%;
+            line-height: 50%;
             font-weight: bold;
 
         }
         .content_star{
-            width: 1050px;
-            height: 250px;
             position: absolute;
-            top: 20%;
-            left: 5%;
+            width: 70%;
+            left: 27%;
+            font-size: 23&;
+
+            display: inline-block;
+            margin-top: 50px;
         }
         .name_box{
             width: 25%;
