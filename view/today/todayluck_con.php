@@ -99,6 +99,7 @@
 <?php
     // 오늘날짜 출력
     date_default_timezone_set('Asia/Seoul');
+
     $today = date("Y/m/d");
 ?>
 
@@ -164,7 +165,7 @@
 
 <!-- 생년월일정보 (세션에서 가져오기) -->
 <?php
-session_start();
+@session_start();
 
 //생년월일 세션을 가져옴
 @$birth = $_SESSION['birth'];
