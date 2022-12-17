@@ -113,7 +113,7 @@
         <div class = "animal" id = "animal">띠 운세</div>
         <div class = "star" id = "star">별자리 운세</div>
         <div class = "listen" id = "listen">듣고싶은 말</div>
-        <div class = "fortune" id = "fortune">포춘쿠키</div>
+        <div class = "fortune" id = "fortune_cookie">포춘쿠키</div>
         <div class = "item" id = "item">행운의 아이템</div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
