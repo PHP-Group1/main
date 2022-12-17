@@ -26,7 +26,9 @@
 
     function header_check() {
         
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
 
         if (!isset($_SESSION['user_id'])) {
             include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";

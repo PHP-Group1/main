@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,7 +136,7 @@
             <div class="item_box">
                 <div class="item_img"></div>
                 <div class="item_text">
-                    당신의 행운의 아이템은 <span>000</span>입니다
+                    당신의 행운의 아이템은 <span><?php include_once "itemService.php"; ?></span>입니다
                 </div>
             </div>
 

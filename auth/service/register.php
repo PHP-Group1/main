@@ -22,7 +22,6 @@
 
         echo 
             "<script>
-                alert('회원가입 성공');
                 location.href = '../register_success.php'
             </script>";
     } else {

@@ -1,11 +1,11 @@
 <?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!isset($_SESSION['user_id'])) {
-    echo "<script>
-                location.href = 'http://localhost:80/main/view/star/need_today.php';
-            </script>";
+    echo "<script>location.href='need_today.php';</script>";
 }
 
 ?>

@@ -1,3 +1,12 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['user_id'])) {
+        echo "<script>location.href='need_star.php';</script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,15 +228,6 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
         </div>
         <div class="next"><img src="../../img/click/우.png"/></div>
     </div>
-    <?php
-
-if (!isset($_SESSION['user_id'])) {
-    echo "<script>
-                location.href = 'http://localhost:80/main/view/star/need_star.php';
-            </script>";
-}
-
-?> 
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

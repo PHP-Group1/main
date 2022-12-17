@@ -1,3 +1,13 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['user_id'])) {
+        echo "<script>location.href='need_animal.php';</script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,8 +166,6 @@
 /* 스크래핑 모듈*/
 include('../../common/simple_html_dom.php');
 
-@session_start();
-
 //생년월일 세션을 가져옴
 @$birth = $_SESSION['birth'];
 
@@ -230,12 +238,12 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <nav>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_animal.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_animal.php";
         ?>
     </nav>
     <div class="box1">
