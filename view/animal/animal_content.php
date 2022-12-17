@@ -12,7 +12,7 @@
             position: relative;
             width: 100vw;
             height: 490px;
-            padding-top: 50px;
+            margin-top: 50px;
         }
         .main_box{
             position: absolute;
@@ -47,20 +47,20 @@
             transform: translate(-50%,-50%);
         }
         .text{
-            position: relative;
+            height:100%;
             float: left;
-            width: 75%;
-            height: 100%;
             color: black;
-            line-height: 180%;
             font-weight: bold;
+            line-height: 50px;
         }
         .content_animal{
-            width: 1050px;
-            height: 250px;
             position: absolute;
-            top: 20%;
-            left: 5%;
+            width: 70%;
+            left: 27%;
+            font-size: 25px;
+            
+            display: inline-block;
+            margin-top: 80px;
         }
         .name_box>div{
             position: absolute;
@@ -77,6 +77,7 @@
         .box2{
             width: 100vw;
             height: 142px;
+            margin-top: 117px;
         }
         .prev{
             float: left;

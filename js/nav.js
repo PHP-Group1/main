@@ -15,7 +15,7 @@ $(document).ready (() => {
         $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
     })
 
-    $('#fortune').click(() => {
+    $('#fortune_cookie').click(() => {
         $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
     })
 

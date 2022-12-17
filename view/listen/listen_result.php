@@ -19,6 +19,7 @@
             padding-top: 65px;
 
             background-color: #fffdf5;
+            display: table;
         }
 
         .listen_box {
@@ -46,6 +47,13 @@
             background: #FFFFFF;
             border: 5px solid #A55E0B;
             border-radius: 20px;
+
+            font-size : 70px;
+            padding-left:50px;
+            padding-right: 50px;
+            display: table-cell;
+            vertical-align: middle;
+            color: #A55E0B;
         }
 
         .another {
