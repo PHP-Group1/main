@@ -172,11 +172,11 @@ include('../../common/simple_html_dom.php');
 //운세 종류
 
 //생년월일 세션을 가져옴
-@$birth = $_SESSION['birth'];
+@$birth = $_SESSION['user_birth'];
 
 //값이 만약에 없다면 주는 기본값
 if(empty($birth)){
-    $birth = "1997-11-22";
+    $birth = "1997-05-06";
 }
 
 //생년월일에서 하이푼을 삭제함
