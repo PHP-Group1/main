@@ -47,6 +47,7 @@
             transform: translate(-50%,-50%);
         }
         .text{
+            height:100%;
             float: left;
             color: black;
             font-weight: bold;
@@ -59,7 +60,7 @@
             font-size: 25px;
             
             display: inline-block;
-            margin-top: 50px;
+            margin-top: 80px;
         }
         .name_box>div{
             position: absolute;
