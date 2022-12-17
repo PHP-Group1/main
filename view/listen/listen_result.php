@@ -1,3 +1,4 @@
+<?php require_once "listenService.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,8 +112,7 @@
     <div class="listen_r">
         <div class="listen_box">
             <div class="listen_title"><span id="listen_title"><?=$title?></span></div>
-            <div class="listen_contents"><?php require_once "listenService.php";
-            print($content);?></div>
+            <div class="listen_contents"><?php print($content) ?></div>
             <div class="another" id = "another">다른말도 듣고 싶어요!</div>
         </div>
     </div>

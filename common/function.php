@@ -1,7 +1,6 @@
 <?php
 
     require_once 'config/conn.php';
-    require_once $_SERVER["DOCUMENT_ROOT"]."/main/auth/service/cookie.php";
 
     function sqlResult($sql) {
         global $conn;
@@ -12,11 +11,6 @@
         } else {
             return $result;
         }
-    }
-
-    function cookie($cookieName, $value) {
-        global $available;
-        setcookie($cookieName, $value, time() + $available);
     }
 
     function loginCheck($logined, $not) {
