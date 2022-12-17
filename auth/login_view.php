@@ -106,11 +106,12 @@
             <hr class = "line" style = "top: 455px;"></hr>
             <input type = "password" placeholder = "PASSWORD" class = "input_pw" name = "pw" id = "pw"></input>
             <hr class = "line" style = "top: 544px;">
-            <button class = "button" id = "login_btn">로그인</button>
         </form>
-
+        <button type="button" class = "button" id = "login_btn">로그인</button>
     </div>
 </div>
     
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

@@ -176,7 +176,9 @@ if (!isset($_SESSION['user_id'])) {
 
 <!-- 생년월일정보 (세션에서 가져오기) -->
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 //생년월일 세션을 가져옴
 @$birth = $_SESSION['birth'];

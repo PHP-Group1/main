@@ -7,15 +7,17 @@ $(document).ready(() => {
         
         if(id.val() == "") {
             alert('id를 입력하세요')
+            id.focus();
             return;
         }
 
         if(pw.val() == "") {
             alert('pw를 입력하세요')
+            pw.focus();
             return;
         }
 
-        $('form').submit();
+        $('.contents').submit();
         
     })
     
