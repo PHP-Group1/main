@@ -53,9 +53,13 @@
             float: left;
             width: 75%;
             height: 100%;
+            color: black;
+            line-height: 180%;
+            font-weight: bold;
+
         }
         .content_star{
-            width: 900px;
+            width: 1050px;
             height: 250px;
             position: absolute;
             top: 20%;
@@ -131,7 +135,7 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
-        .swiper>img{
+        a>img{
             max-width:110%;
             max-height: 110%;
             object-fit: cover;
@@ -153,7 +157,26 @@
     <title>Document</title>
 </head>
 
-<body> 
+<!--스크래핑 소스--------------------------------------------------------------------------------------------------------->
+<?php 
+/* 스크래핑 모듈*/
+include('../../common/simple_html_dom.php');
+//운세 종류
+
+@$type=$_GET["type"];
+if(empty($type)){
+    $type = "양자리";
+}
+//$type = str_replace(' ','%20',$type);
+//echo "type : ".$type;
+//echo 'https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qvt=0&query='.$type;
+
+$html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qvt=0&query='.$type.'%20운세');
+// 전달받은 운세 종류 출력
+?>
+
+
+<body>
     <header>
         <?php
             include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
@@ -166,14 +189,14 @@
     </nav>
     <div class="box">
         <div class="name_box">
-            <div id="names_star">양자리</div>
+            <div id="names_star"><?php echo $type;?></div>
         </div>
         <div class="main_box">
             <div class="photo">
-                <img id="photo_star" class="photo_star" src="../../img/star/양.png"/>
+                <img id="photo_star" class="photo_star" <?php echo "src='../../img/star/$type.png'" ?>/>
             </div>
             <div class="text">
-                <div id="content_star" class="content_star">나는 양자리야</div>
+                <div id="content_star" class="content_star"><?php echo $html->find('.detail p._cs_fortune_text',0)->outertext;?></div>
             </div>
         </div>
     </div>
@@ -181,18 +204,18 @@
         <div class="prev"><img src="../../img/click/좌.png"/></div>
         <div class="select">
             <section class="slides">
-            <div class="swiper"><img id="star" src="../../img/star/양.png" onclick="change1()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/황소.png" onclick="change2()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/쌍둥이.png" onclick="change3()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/개.png" onclick="change4()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/사자.png" onclick="change5()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/처녀.png" onclick="change6()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/천칭.png" onclick="change7()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/전갈.png" onclick="change8()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/사수.png" onclick="change9()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/염소.png" onclick="change10()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/물병.png" onclick="change11()" style="cursor: pointer;"/></div>
-            <div class="swiper"><img id="star" src="../../img/star/물고기.png" onclick="change12()" style="cursor: pointer;"/></div>
+            <div class="swiper"><a href="star_content.php?type=양자리"><img id="star" src="../../img/star/양자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=황소자리"><img id="star" src="../../img/star/황소자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=쌍둥이자리"><img id="star" src="../../img/star/쌍둥이자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=게자리"><img id="star" src="../../img/star/게자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=사자자리"><img id="star" src="../../img/star/사자자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=처녀자리"><img id="star" src="../../img/star/처녀자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=천칭자리"><img id="star" src="../../img/star/천칭자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=전갈자리"><img id="star" src="../../img/star/전갈자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=사수자리"><img id="star" src="../../img/star/사수자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=염소자리"><img id="star" src="../../img/star/염소자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=물병자리"><img id="star" src="../../img/star/물병자리.png"/></a></div>
+            <div class="swiper"><a href="star_content.php?type=물고기자리"><img id="star" src="../../img/star/물고기자리.png"/></a></div>
             </section>
         </div>
         <div class="next"><img src="../../img/click/우.png"/></div>
@@ -207,7 +230,6 @@ if (!isset($_SESSION['user_id'])) {
 
 ?> 
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../js/star_click.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
 
