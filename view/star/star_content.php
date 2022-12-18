@@ -34,10 +34,10 @@
             border-radius: 20px;
         }
         .name_box{
-            position: absolute;
+            position: relative;
             top: 8%;
             left: 2.5%;
-            width: 360px;
+            width: 25%;
             height: 60px;
             background-color: #FFF1A5;
             border: 4px solid #C98724;
@@ -60,23 +60,20 @@
         .text{
             float: left;
             color: black;
-            line-height: 50%;
             font-weight: bold;
+            line-height: 50px;
 
         }
         .content_star{
             position: absolute;
             width: 70%;
             left: 27%;
-            font-size: 23&;
+            font-size: 25px;
 
             display: inline-block;
-            margin-top: 50px;
+            margin-top: 60px;
         }
-        .name_box{
-            width: 25%;
-            position: relative;
-        }
+
         .name_box>div{
             position: absolute;
             top: 50%;
@@ -92,6 +89,7 @@
         .box2{
             width: 100vw;
             height: 142px;
+            margin-top: 20px;
         }
         .prev{
             float: left;
