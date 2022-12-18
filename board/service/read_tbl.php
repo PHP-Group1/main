@@ -65,7 +65,7 @@
 ?>
 <header>
     <?php
-        include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+        include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
     ?>
 </header>
 <aside>

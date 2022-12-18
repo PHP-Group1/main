@@ -125,7 +125,7 @@ $start = ($page - 1) * $list_num;
     ?>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <asdie>

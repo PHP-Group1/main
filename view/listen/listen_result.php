@@ -89,8 +89,7 @@
 <body>
     <header>
         <?php
-        require_once "../../common/function.php";
-            header_check();
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <nav>

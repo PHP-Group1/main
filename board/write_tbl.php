@@ -1,3 +1,18 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['user_id'])) {
+        echo
+            "
+            <script>
+                alert('로그인이 필요한 서비스입니다');
+                location.href = 'service/index_tbl.php';
+            </script>
+            ";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +83,7 @@
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header.php";
+            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <div class = "write_con_box">

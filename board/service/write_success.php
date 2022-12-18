@@ -2,7 +2,9 @@
 
     require '../../common/common.php';
 
-    session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
     $title = $_POST['title'];
     $content = $_POST['content'];
