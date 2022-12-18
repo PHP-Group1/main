@@ -82,6 +82,7 @@ if (!isset($_SESSION['user_id'])) {
             height: 370px;
             border-bottom: 2px solid #B37C3A;
             margin: 46px auto;
+
         }
         img{
             width: 236px;
@@ -92,17 +93,16 @@ if (!isset($_SESSION['user_id'])) {
             width: 1300px;
             height: 236px;
             position: relative;
+
+            display: table-cell;
+            vertical-align: middle;
         }
 
         .contents{
-            width: 1050px;
-            height: 210px;
             font-weight: bold;
             line-height: 180%;
-            margin-bottom: 20px;
             position: absolute;
             left: 21%;
-            top: 10%;
         }
 
     </style>

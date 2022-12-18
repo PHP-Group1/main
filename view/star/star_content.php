@@ -58,20 +58,22 @@
             max-height: 80%;
         }
         .text{
+            height: 100%;
             float: left;
             color: black;
-            line-height: 50%;
+            line-height: 180%;
             font-weight: bold;
+
 
         }
         .content_star{
             position: absolute;
             width: 70%;
             left: 27%;
-            font-size: 23&;
+            font-size: 23px;
 
             display: inline-block;
-            margin-top: 50px;
+            margin-top: 80px;
         }
         .name_box{
             width: 25%;
@@ -92,6 +94,8 @@
         .box2{
             width: 100vw;
             height: 142px;
+
+            margin-top: 117px;
         }
         .prev{
             float: left;
