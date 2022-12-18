@@ -31,7 +31,8 @@
             font-size: 20px;
             line-height: 24px;  
         }
-        p{
+        .header > p{
+            cursor: pointer;
             color: #ffffff;
             position: absolute;
             height: 24px;
@@ -44,9 +45,6 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
-        }
-        .header > p{
-            cursor: pointer;
         }
     </style>
 </head>
