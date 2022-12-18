@@ -181,7 +181,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 //생년월일 세션을 가져옴
-@$birth = $_SESSION['birth'];
+@$birth = $_SESSION['user_birth'];
 
 //생년월일에서 하이푼을 삭제함
 @$birth_rep = str_replace("-", "", $birth);

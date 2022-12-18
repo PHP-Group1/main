@@ -34,10 +34,10 @@
             border-radius: 20px;
         }
         .name_box{
-            position: absolute;
+            position: relative;
             top: 8%;
             left: 2.5%;
-            width: 360px;
+            width: 25%;
             height: 60px;
             background-color: #FFF1A5;
             border: 4px solid #C98724;
@@ -60,11 +60,11 @@
         .text{
             height: 100%;
             float: left;
+
             color: black;
             line-height: 180%;
             font-weight: bold;
-
-
+            line-height: 50px;
         }
         .content_star{
             position: absolute;
@@ -78,7 +78,9 @@
         .name_box{
             width: 25%;
             position: relative;
+
         }
+
         .name_box>div{
             position: absolute;
             top: 50%;
@@ -94,7 +96,6 @@
         .box2{
             width: 100vw;
             height: 142px;
-
             margin-top: 117px;
         }
         .prev{
