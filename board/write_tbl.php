@@ -94,14 +94,39 @@
         </nav>
         <div class = "write_con">
             <div class = "wrap_write">
-                <form action="write_success.php" method="post">
-                        <input type="title" class = "input_title" name="title" placeholder="제목을 입력하여주세요.">
-                        <textarea class = "input_content" name="content" placeholder="내용을 입력하여주세요."></textarea>
-                        <input type="submit" value="보내기" class = "send">
-                    </div>
-                </form>
+                <form action="service/write_success.php" method="post" id="board">
+                        <input type="title" class = "input_title" name="title" placeholder="제목을 입력하여주세요." id="title">
+                        <textarea class = "input_content" name="content" placeholder="내용을 입력하여주세요." id="content"></textarea>
+                    </form>
+                    <button type="button" class="send" id="btn">보내기</button>
+                </div>
         </div>
     </div>
     
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            let title = $('#title');
+            let content = $('#content');
+            let btn = $('#btn');
+
+            btn.click(() => {
+                if (title.val() == '') {
+                    alert('제목을 입력해주세요.')
+                    title.focus();
+                    return;
+                }
+
+                if (content.val() == '') {
+                    alert('글 내용을 입력해주세요.')
+                    content.focus();
+                    return;
+                }
+
+                $('form').submit();
+            })
+            
+        })
+    </script>
 </body>
 </html>
