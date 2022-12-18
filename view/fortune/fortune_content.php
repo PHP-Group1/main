@@ -1,3 +1,11 @@
+<?php 
+    if (isset($_COOKIE['fortune'])) {
+        echo
+            "<script>
+                location.href = 'http://localhost:80/main/view/fortune/fortune_result_con.php';
+            </script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

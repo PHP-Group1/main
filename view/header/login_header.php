@@ -65,9 +65,11 @@
 
             let qna = document.querySelector('#qna');
 
-            qna.addEventListener('click', () => [
+
+            qna.addEventListener('click', () => {
                 location.href = "http://localhost:80/main/view/Qna/req_content.php";
-            ])
+            })
+
         </script>
 </body>
 </html>

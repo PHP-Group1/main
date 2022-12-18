@@ -8,7 +8,7 @@
         echo
             "
             <script>
-                alert('로그아웃 성공');
+                alert('로그아웃을 성공했습니다.');
                 location.href = 'http://localhost:80/main/auth/login_view.php';
             </script>
             ";
@@ -16,7 +16,7 @@
         echo 
             "
             <script>
-                alert('로그인 안돼있음');
+                alert('로그인상태가 아닙니다.');
                 <script>
                     location.href = 'http://localhost:80/main/auth/login_view.php';
                 </script>

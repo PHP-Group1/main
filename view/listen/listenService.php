@@ -1,15 +1,21 @@
 <?php
-
-    require_once "../../common/common.php";
-
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/main/common/common.php";
+    
     $type = $_GET['listen_title'];
 
-    $sql = "select content from listen where type = '$type'";
+    if (isset($_COOKIE[$type])) {
+        $content = $_COOKIE[$type];
+    } else {
+        $sql = "select content from listen where type = '$type'";
 
-    $result = sqlResult($sql);
+        $result = sqlResult($sql);
 
-    $row = mysqli_fetch_all($result);
+        $row = mysqli_fetch_all($result);
 
-    $num = mt_rand(0, 4);
+        $num = mt_rand(0, count($row)-1);
 
-    $content = $row[$num][0];
+        $content = $row[$num][0];
+
+        cookie($type, $content);
+    }
+?>

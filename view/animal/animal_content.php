@@ -1,3 +1,13 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['user_id'])) {
+        echo "<script>location.href='need_animal.php';</script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,10 +166,8 @@
 /* 스크래핑 모듈*/
 include('../../common/simple_html_dom.php');
 
-@session_start();
-
 //생년월일 세션을 가져옴
-@$birth = $_SESSION['birth'];
+@$birth = $_SESSION['user_birth'];
 
 //값이 만약에 없다면 주는 기본값
 if(empty($birth)){
@@ -230,12 +238,12 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
 <body>
     <header>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/header/header_check.php";
         ?>
     </header>
     <nav>
         <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_animal.php";
+            include_once $_SERVER["DOCUMENT_ROOT"]."/main/view/nav/nav_animal.php";
         ?>
     </nav>
     <div class="box1">
@@ -255,7 +263,7 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
         <div class="prev"><img src="../../img/click/좌.png"/></div>
         <div class="select">
             <section class="slides">
-            <div class="swiper"><a href="animal_content.php?type=쥐띠"><img id="animal_click" src="../../img/animal/쥐띠.png"/></a></div>
+            <div class="swiper"><a href="animal_content.php?type=쥐띠"><img id="animal" src="../../img/animal/쥐띠.png"/></a></div>
             <div class="swiper"><a href="animal_content.php?type=소띠"><img id="animal" src="../../img/animal/소띠.png"/></a></div>
             <div class="swiper"><a href="animal_content.php?type=호랑이띠"><img id="animal" src="../../img/animal/호랑이띠.png"/></a></div>
             <div class="swiper"><a href="animal_content.php?type=토끼띠"><img id="animal" src="../../img/animal/토끼띠.png"/></a></div>

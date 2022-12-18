@@ -72,7 +72,7 @@
     <div class = "main_page">
         <div class = "contents_box">
             <!--포춘쿠키-->
-                <div class = "content1" id = "fortune_cookie"></div>
+                <div class = "content1" id = "fortune_cookie_main"></div>
             <!--오늘의 운세-->
                 <div class = "content2" id = "todayLuck_con"></div>
             <!--듣고싶은 말-->
@@ -90,10 +90,6 @@
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
        $(document).ready (() => {
-            $('#fortune_cookie').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
-            })
-
             $('#todayLuck_con').click(() => {
                 $(location).attr("href","http://localhost:80/main/view/today/need_today.php")
             })
@@ -104,6 +100,10 @@
 
             $('#luckyItem_con').click(() => {
                 $(location).attr("href","http://localhost:80/main/view/item/need_item.php")
+            })
+
+            $('#fortune_cookie_main').click(() => {
+                $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
             })
             
         })

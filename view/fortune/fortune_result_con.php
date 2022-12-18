@@ -1,3 +1,4 @@
+<?php require_once "fortuneService.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,7 @@
         <div class = "cookie_img"></div>
         <div class = "fortune_text">
             <span>
-
+                <?php print($fortune); ?>
             </span>
         </div>
     </div>

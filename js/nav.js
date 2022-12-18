@@ -15,11 +15,11 @@ $(document).ready (() => {
         $(location).attr("href","http://localhost:80/main/view/listen/listen_con.php")
     })
 
-    $('#fortune_cookie').click(() => {
-        $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
-    })
-
     $('#item').click(() => {
         $(location).attr("href","http://localhost:80/main/view/item/luckyitem.php")
+    })
+
+    $('#fortune_cookie_nav').click(() => {
+        $(location).attr("href","http://localhost:80/main/view/fortune/fortune_content.php")
     })
 })

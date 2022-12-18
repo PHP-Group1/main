@@ -1,3 +1,12 @@
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (!isset($_SESSION['user_id'])) {
+        echo "<script>location.href='need_star.php';</script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,9 +171,64 @@
 include('../../common/simple_html_dom.php');
 //운세 종류
 
+//생년월일 세션을 가져옴
+@$birth = $_SESSION['user_birth'];
+
+//값이 만약에 없다면 주는 기본값
+if(empty($birth)){
+    $birth = "1997-05-06";
+}
+
+//생년월일에서 하이푼을 삭제함
+@$birth_rep = str_replace("-", "", $birth);
+
+//생년월일에서 월과 일을 추출
+@$birth_year = substr($birth_rep, 4, 4);
+
+//문자를 정수로 바꾸어서 추출
+@$birth_cha = (int) $birth_year;
+
+//운세값, 초기값으로 회원의 띠를 출력
 @$type=$_GET["type"];
+
+//정수로 바꾼 값의 따른 회원의 별자리를 출력
 if(empty($type)){
-    $type = "양자리";
+    if($birth_cha >= 320 && $birth_cha <= 420){
+        $type = "양자리";
+    }
+    else if($birth_cha >= 421 && $birth_cha <= 520){
+        $type = "황소자리";
+    }
+    else if($birth_cha >= 521 && $birth_cha <= 621){
+        $type = "쌍둥이자리";
+    }
+    else if($birth_cha >= 622 && $birth_cha <= 722){
+        $type = "게자리";
+    }
+    else if($birth_cha >= 723 && $birth_cha <= 822){
+        $type = "사자자리";
+    }
+    else if($birth_cha >= 823 && $birth_cha <= 922){
+        $type = "처녀자리";
+    }
+    else if($birth_cha >= 923 && $birth_cha <= 1021){
+        $type = "천칭자리";
+    }
+    else if($birth_cha >= 1022 && $birth_cha <= 1121){
+        $type = "전갈자리";
+    }
+    else if($birth_cha >= 1122 && $birth_cha <= 1221){
+        $type = "사수자리";
+    }
+    else if($birth_cha >= 1222 || $birth_cha <= 120){
+        $type = "염소자리";
+    }
+    else if($birth_cha >= 121 && $birth_cha <= 218){
+        $type = "물병자리";
+    }
+    else if($birth_cha >= 219 && $birth_cha <= 320){
+        $type = "물고기자리";
+    }
 }
 //$type = str_replace(' ','%20',$type);
 //echo "type : ".$type;
@@ -219,15 +283,6 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
         </div>
         <div class="next"><img src="../../img/click/우.png"/></div>
     </div>
-    <?php
-
-if (!isset($_SESSION['user_id'])) {
-    echo "<script>
-                location.href = 'http://localhost:80/main/view/star/need_star.php';
-            </script>";
-}
-
-?> 
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
