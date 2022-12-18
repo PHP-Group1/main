@@ -53,7 +53,7 @@
 <body>
         <div class = "header">
             <a href = "http://localhost:80/main/view/main_content.php"><h3 class = "logo"> 당신의 운세</h3></a>
-            <p style = "left:95%;">QnA</p>
+            <p style = "left:95%;" id = "qna">QnA</p>
             <p style = "left:85%;" id="logout">로그아웃</p>
         </div>
         <script>
@@ -62,6 +62,12 @@
             logout.addEventListener('click', () => {
                 location.href = "http://localhost:80/main/auth/service/logout.php";
             })
+
+            let qna = document.querySelector('#qna');
+
+            qna.addEventListener('click', () => [
+                location.href = "http://localhost:80/main/view/Qna/req_content.php";
+            ])
         </script>
 </body>
 </html>
