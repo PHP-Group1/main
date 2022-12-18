@@ -57,7 +57,6 @@
             transform: translate(-50%,-50%);
         }
         .text{
-            height:100%;
             float: left;
             color: black;
             font-weight: bold;
@@ -87,7 +86,7 @@
         .box2{
             width: 100vw;
             height: 142px;
-            margin-top: 117px;
+            margin-top: 20px;
         }
         .prev{
             float: left;

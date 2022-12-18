@@ -28,13 +28,32 @@
             width:800px;
             height:292px;
         }
-        .fortune_text{
+
+        .fortune_box{
             width: 80%;
-            height: 454px;
+            height: 350px;
 
             margin: auto;
             background-color: white;
             border: 5px solid #A55E0B;
+
+            position: relative;
+        }
+        .fortune_text{
+            width: 65%;
+            height: 60%;
+
+            text-align: center;
+            line-height: 180%;
+            font-size: 1.3em;
+            font-weight: bolder;
+
+            background-color: white;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
     </style>
 </head>
@@ -51,10 +70,12 @@
     </nav>
     <div class = "f_result_con">
         <div class = "cookie_img"></div>
+        <div class = "fortune_box">
         <div class = "fortune_text">
             <span>
                 <?php print($fortune); ?>
             </span>
+        </div>
         </div>
     </div>
 </body>
