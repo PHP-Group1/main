@@ -4,7 +4,12 @@
     }
 
     if (!isset($_SESSION['user_id'])) {
-        echo "<script>location.href='need_item.php';</script>";
+        echo 
+        "
+            <script>
+                location.href='need_item.php';
+            </script>
+        ";
     }
 ?>
 <?php require_once "itemService.php"; ?>
