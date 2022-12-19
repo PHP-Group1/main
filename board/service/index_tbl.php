@@ -57,14 +57,14 @@
         }
         .page{
             width:593px;
-            height: 29.38px;
+            height: 40px;
 
             margin-top: 95px;
         }
         .page > a {
             margin-right: 48px;
             font-size: 20px;
-
+            height: 40px;
             text-decoration: none;
             color:black;
         }
@@ -72,11 +72,8 @@
             width: 593px;
             border-bottom: 1px solid black;
         }
-        .previous{
-            background-image: url('../../img/arrow/화살표왼쪽.png');
-            width: 30px;
-            height: 40px;
-        }
+       
+        
     </style>
 </head>
 
@@ -174,10 +171,12 @@ $start = ($page - 1) * $list_num;
         
         //이전 페이지
         if($page <= 1){
-            echo "<a href='index_tbl.php?page=1' class = "previous">이전</a>";
+
+            echo "<a href='index_tbl.php?page=1' class = 'pre'>〈</a>";
         }
         else{
-            echo "<a href='index_tbl.php?page=".($page - 1)."' class = "previous">이전</a>";
+            echo "<a href='index_tbl.php?page=".($page - 1)."' class = 'pre'>〈</a>";
+
         }
         
         //페이지 번호 출력
@@ -188,10 +187,10 @@ $start = ($page - 1) * $list_num;
         
         //현재 페이지번호 출력
         if($page >= $total_page){
-            echo "<a href='index_tbl.php?page=".$total_page."' class = "next">다음</a>";
+            echo "<a href='index_tbl.php?page=".$total_page."' class = 'next'>〉</a>";
         }
         else{
-            echo "<a href='index_tbl.php?page=".($page + 1)."' class = "next">다음</a>";
+            echo "<a href='index_tbl.php?page=".($page + 1)."' class = 'next'>〉</a>";
         }
         echo "</p>";
         ?>

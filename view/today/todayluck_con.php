@@ -93,9 +93,6 @@ if (!isset($_SESSION['user_id'])) {
             width: 1300px;
             height: 236px;
             position: relative;
-
-            display: table-cell;
-            vertical-align: middle;
         }
 
         .contents{
@@ -103,6 +100,8 @@ if (!isset($_SESSION['user_id'])) {
             line-height: 180%;
             position: absolute;
             left: 21%;
+
+            margin-top:30px;
         }
 
     </style>

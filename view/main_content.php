@@ -91,7 +91,7 @@
     <script>
        $(document).ready (() => {
             $('#todayLuck_con').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/today/need_today.php")
+                $(location).attr("href","http://localhost:80/main/view/today/todayluck_con.php")
             })
 
             $('#listen_con').click(() => {
@@ -99,7 +99,7 @@
             })
 
             $('#luckyItem_con').click(() => {
-                $(location).attr("href","http://localhost:80/main/view/item/need_item.php")
+                $(location).attr("href","http://localhost:80/main/view/item/luckyitem.php")
             })
 
             $('#fortune_cookie_main').click(() => {
