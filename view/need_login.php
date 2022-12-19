@@ -34,6 +34,15 @@
             height: 70px;
             background-color: #FFFDF5;
         }
+        .c2{
+            position: absolute;
+            text-align: center;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30px;
+
+            color: #AB6700;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,8 +61,17 @@
     <div class="box1">
         <div class="box2">
             <h3 class="c1">로그인이 필요한 서비스입니다.</h3>
+            <h3 class = "c2">로그인 하러 가기</h3>
         </div>
     </div>
+    <script>
+let c2 = document.querySelector('#c2');
+
+c2.addEventListener('click', () => {
+    location.href = "http://localhost:80/main/auth/login_view.php";
+})
+
+</script>
 
 </body>
 
