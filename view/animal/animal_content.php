@@ -86,7 +86,7 @@
         .box2{
             width: 100vw;
             height: 142px;
-            margin-top: 20px;
+            margin-top: 117px;
         }
         .prev{
             float: left;
