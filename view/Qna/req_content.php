@@ -33,7 +33,7 @@
             padding: 0;
             margin: auto;
             margin-bottom: 22px;
-            width:600px;
+            text-align: center;
             height:48px;
 
             font-weight: 700;
