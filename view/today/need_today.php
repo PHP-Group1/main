@@ -69,15 +69,15 @@
     <div class="box1">
         <div class="box2">
             <h3 class="c1">로그인이 필요한 서비스입니다.</h3>
-            <h3 class = "c2">로그인 하러 가기</h3>
+            <h3 class = "c2" id = "c2">로그인 하러 가기</h3>
         </div>
     </div>
     <script>
-let c2 = document.querySelector('#c2');
+    let c2 = document.querySelector('#c2');
 
-c2.addEventListener('click', () => {
-    location.href = "http://localhost:80/main/auth/login_view.php";
-})
+    c2.addEventListener('click', () => {
+        location.href = "http://localhost:80/main/auth/login_view.php";
+    })
 
 </script>
 </body>

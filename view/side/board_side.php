@@ -34,6 +34,7 @@
             font-size: 18px;
             line-height: 22px;
             color:black;
+
         }
         .req{
             position: relative;
@@ -46,6 +47,8 @@
             font-size: 18px;
             line-height: 22px;
             color:black;
+
+            cursor:pointer;
         }
         .employ{
             position: relative;
@@ -58,6 +61,8 @@
             font-size: 18px;
             line-height: 22px;
             color:black;
+
+            cursor:pointer;
         }
         .board{
             position: relative;
@@ -70,6 +75,8 @@
             font-size: 18px;
             line-height: 22px;
             color:black;
+
+            cursor:pointer;
         }
         
     </style>

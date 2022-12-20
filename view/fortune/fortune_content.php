@@ -39,8 +39,7 @@
             line-height: 139px;
             color:#ffffff;
             margin: auto;
-
-            width: 800px;
+            text-align: center;
             height: 134px;
 
             -webkit-text-stroke: 6px #AB6700;

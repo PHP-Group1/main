@@ -259,7 +259,7 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
         </div>
     </div>
     <div class="box2">            
-        <div class="prev"><img src="../../img/click/좌.png"/></div>
+        <div class="prev"><img src="../../img/arrow/화왼.png"/></div>
         <div class="select">
             <section class="slides">
             <div class="swiper"><a href="animal_content.php?type=쥐띠"><img id="animal" src="../../img/animal/쥐띠.png"/></a></div>
@@ -276,7 +276,7 @@ $html = file_get_html('https://search.naver.com/search.naver?where=nexearch&sm=t
             <div class="swiper"><a href="animal_content.php?type=돼지띠"><img id="animal" src="../../img/animal/돼지띠.png"/></a></div>
             </section>
         </div>
-        <div class="next"><img src="../../img/click/우.png"/></div>
+        <div class="next"><img src="../../img/arrow/화오.png"/></div>
     </div>
 <script src="../../js/slides.js" type="text/javascript" charset="utf-8"></script>
 </body>
