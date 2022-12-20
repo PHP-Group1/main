@@ -21,7 +21,7 @@
 
       .b1 {
          margin: auto;
-         width:240px;
+         width:250px;
          height: 32px;
          font-weight: 700;
          font-size: 32px;

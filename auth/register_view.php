@@ -95,6 +95,7 @@
             height: 109.45px;
             top: 100px;
 
+
             background: #442C2C;
             font-size: 24px;
             line-height: 29px;
